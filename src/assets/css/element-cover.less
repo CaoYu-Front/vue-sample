@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/**
+* element-ui样式覆写
+* 全局可用的样式在这边覆写
+**/
+@import "_variables";
+
+.main-scroll {
+	&.el-scrollbar {
+		width: 100%;
+		height: 100%;
+	}
+
+	.el-scrollbar__wrap {
+		overflow: hidden scroll;
+	}
+}
