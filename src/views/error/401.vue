@@ -6,8 +6,8 @@
         <div class="error-msg-row _state">401</div>
         <div class="error-msg-row">抱歉，您暂无访问该页面的权限！</div>
         <div class="error-msg-row">
-          <el-button type="success">返回上一页</el-button>
-          <el-button type="success">返回首页</el-button>
+          <el-button type="success" @click="$router.history.go(-1)">返回上一页</el-button>
+          <el-button type="success" @click="$router.replace({ name: 'login' })">前往登录</el-button>
         </div>
       </div>
     </div>

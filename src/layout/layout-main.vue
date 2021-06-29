@@ -3,39 +3,11 @@
     <el-header ref="header">Header</el-header>
     <el-container class="wrap" :height="`${nContHeight}px`">
       <el-aside width="200px" :height="`${nContHeight}px`">
-        <el-scrollbar class="main-scroll">
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-          111111111 <br />
-        </el-scrollbar>
+        <el-scrollbar class="main-scroll"></el-scrollbar>
       </el-aside>
       <el-main :height="`${nContHeight}px`">
         <el-scrollbar class="main-scroll">
-          <error401></error401>
+          <router-view />
         </el-scrollbar>
       </el-main>
     </el-container>
@@ -49,12 +21,11 @@
  * @author caoyu
  * @CreatedTime 2021/6/28 13:46
  **/
-import Error401 from "@/views/error/404";
 
 export default {
   name: "layout-main",
   props: {},
-  components: { Error401 },
+  components: {},
   data() {
     return {
       nContHeight: 0,
@@ -72,8 +43,8 @@ export default {
     fWinResize(e) {
       console.log(e);
       this.$nextTick(() => {
-        const nHead = this.$refs.header.$el.clientHeight;
-        const nFoot = this.$refs.footer.$el.clientHeight;
+        const nHead = this.$refs.header && this.$refs.header.$el.clientHeight;
+        const nFoot = this.$refs.footer && this.$refs.footer.$el.clientHeight;
         this.nContHeight = e.currentTarget.innerHeight - nHead - nFoot;
       });
     },

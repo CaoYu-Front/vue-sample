@@ -1,15 +1,11 @@
 <template>
-  <layout-main />
+  <router-view />
 </template>
 
 <script>
-import LayoutMain from "@/layout/layout-main";
-
 export default {
   name: "App",
-  components: {
-    LayoutMain,
-  },
+  components: {},
 };
 </script>
 

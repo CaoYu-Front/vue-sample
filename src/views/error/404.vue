@@ -6,8 +6,8 @@
         <div class="error-msg-row _state">404</div>
         <div class="error-msg-row">糟糕！当前访问页面不存在。。。</div>
         <div class="error-msg-row">
-          <el-button type="success">返回上一页</el-button>
-          <el-button type="success">返回首页</el-button>
+          <el-button type="success" @click="$router.history.go(-1)">返回上一页</el-button>
+          <el-button type="success" @click="$router.replace({ name: 'homepage' })">返回首页</el-button>
         </div>
       </div>
     </div>
