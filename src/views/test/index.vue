@@ -1,15 +1,16 @@
 <template>
-  <div class="layout-sidebar">layout-sidebar</div>
+  <div class="index"></div>
 </template>
 
 <script>
 /**
- * @description layout-sidebar.vue
- * @author caoyu
- * @CreatedTime 2021/6/28 7:42 下午
+ * @description index.vue
+ * @author handle、
+ * @CreatedTime 2021/7/2 15:27
  **/
+
 export default {
-  name: "layout-sidebar",
+  name: "index",
   props: {},
   components: {},
   data() {
@@ -25,13 +26,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.layout-sidebar {
-}
+@import url("~@/assets/css/_variables");
 
-::v-deep {
+.index {
 }
 </style>
 <style lang="less">
-.layout-sidebar {
+.index {
 }
 </style>

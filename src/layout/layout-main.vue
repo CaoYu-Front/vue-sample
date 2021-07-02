@@ -2,13 +2,13 @@
   <el-container class="wrap-abs">
     <el-header ref="header">Header</el-header>
     <el-container class="wrap" :height="`${nContHeight}px`">
-      <el-aside width="200px" :height="`${nContHeight}px`">
-        <el-scrollbar class="main-scroll"></el-scrollbar>
-      </el-aside>
-      <el-main :height="`${nContHeight}px`">
+      <el-aside :height="`${nContHeight}px`">
         <el-scrollbar class="main-scroll">
-          <router-view />
+          <layout-navbar :menu="aMenus" />
         </el-scrollbar>
+      </el-aside>
+      <el-main>
+        <layout-content :height="nContHeight" />
       </el-main>
     </el-container>
     <el-footer ref="footer">Footer</el-footer>
@@ -17,18 +17,42 @@
 
 <script>
 /**
- * @desc layout-main.vue
+ * @description layout-main.vue
  * @author caoyu
  * @CreatedTime 2021/6/28 13:46
  **/
+import LayoutNavbar from "./layout-navbar";
+import LayoutContent from "./layout-content";
 
 export default {
   name: "layout-main",
   props: {},
-  components: {},
+  components: { LayoutNavbar, LayoutContent },
   data() {
     return {
       nContHeight: 0,
+      aMenus: [
+        {
+          id: "animation",
+          name: "动效",
+          icon: "el-icon-setting",
+          children: [
+            { id: "test", name: "测试", icon: "el-icon-loading" },
+            { id: "carousel", name: "轮播", icon: "el-icon-data-board" },
+          ],
+        },
+        {
+          id: "data",
+          name: "可视化数据",
+          icon: "el-icon-notebook-1",
+          children: [
+            { id: "table", name: "滚动列表", icon: "el-icon-s-grid" },
+            { id: "gpscoor", name: "gps坐标简易转化", icon: "el-icon-s-grid" },
+            { id: "draglist", name: "拖拽列表", icon: "el-icon-s-grid" },
+            { id: "echarts", name: "Echarts图", icon: "el-icon-s-grid" },
+          ],
+        },
+      ],
     };
   },
   computed: {},
@@ -63,22 +87,17 @@ export default {
 
 .el-header,
 .el-footer {
-  background-color: #b3c0d1;
-  color: @c_font;
   text-align: center;
   line-height: 60px;
+  background-color: #b3c0d1;
 }
 
 .el-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: center;
-  line-height: 200px;
+  background-color: @c_block;
 }
 
 .el-main {
+  padding: 0;
   background-color: #e9eef3;
-  color: #333;
-  text-align: center;
 }
 </style>

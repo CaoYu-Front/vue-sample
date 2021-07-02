@@ -16,7 +16,7 @@
 
 <script>
 /**
- * @desc 401.vue
+ * @description 401.vue
  * @author caoyu
  * @CreatedTime 2021/6/28 17:16
  **/

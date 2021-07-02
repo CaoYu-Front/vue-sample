@@ -1,7 +1,7 @@
 import { MessageBox } from "element-ui";
 
 /**
- * @desc 基于element-ui封装 强提示框
+ * @description 基于element-ui封装 强提示框
  * @param {String} message 提示信息
  * @param {Object} options 其他属性
  * @param {String} options.title 标题
@@ -16,7 +16,7 @@ export function alert(message, options) {
 }
 
 /**
- * @desc 基于element-ui封装 确认提示框
+ * @description 基于element-ui封装 确认提示框
  * @param {String} message 提示信息
  * @param {Object} options 其他属性
  * @param {String} options.title 标题

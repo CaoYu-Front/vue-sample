@@ -1,0 +1,3578 @@
+@import "../../../assets/css/_variables";
+
+.classic-1 {
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 30px;
+	display: grid;
+}
+
+.classic-1:before,
+.classic-1:after {
+	content: "Loading...";
+	grid-area: 1/1;
+	-webkit-mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
+	animation: c1 1s infinite cubic-bezier(0.5, 220, 0.5, -220);
+}
+
+.classic-1:after {
+	-webkit-mask-position: 1ch 50%;
+	--s: -1;
+}
+
+@keyframes c1 {
+	100% {
+		transform: translateY(calc(var(--s, 1) * 0.1%));
+	}
+}
+
+
+.classic-2 {
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 30px;
+	display: grid;
+	overflow: hidden;
+}
+
+.classic-2:before,
+.classic-2:after {
+	content: "Loading...";
+	grid-area: 1/1;
+	clip-path: inset(0 -200% 50%);
+	text-shadow: -10ch 0 0;
+	animation: c2 1s infinite;
+}
+
+.classic-2:after {
+	clip-path: inset(50% -200% 0);
+	text-shadow: 10ch 0 0;
+	--s: -1;
+}
+
+@keyframes c2 {
+	50%, 100% {
+		transform: translateX(calc(var(--s, 1) * 100%));
+	}
+}
+
+
+.classic-3 {
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 30px;
+	display: grid;
+	overflow: hidden;
+}
+
+.classic-3:before,
+.classic-3:after {
+	content: "Loading...";
+	grid-area: 1/1;
+	clip-path: inset(0 -200% 50%);
+	text-shadow: -10ch 0 0;
+	animation: c3 2s infinite;
+}
+
+.classic-3:after {
+	clip-path: inset(50% -200% 0);
+	text-shadow: 10ch 0 0;
+	--s: -1;
+	animation-delay: 1s;
+}
+
+@keyframes c3 {
+	25%, 100% {
+		transform: translateX(calc(var(--s, 1) * 100%));
+	}
+}
+
+.classic-4 {
+	padding-bottom: 5px;
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 30px;
+	overflow: hidden;
+	color: #0000;
+	text-shadow: 0 0 0 #000, 10ch 0 0 #000;
+	background: linear-gradient(#000 0 0) bottom left/0% 3px no-repeat;
+	animation: c4 1.5s infinite;
+}
+
+.classic-4:before {
+	content: "Loading...";
+}
+
+@keyframes c4 {
+	80% {
+		text-shadow: 0 0 0 #000, 10ch 0 0 #000;
+		background-size: 100% 3px
+	}
+	100% {
+		text-shadow: -10ch 0 0 #000, 0 0 0 #000
+	}
+}
+
+
+.classic-5 {
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 30px;
+	line-height: 1.2em;
+	display: grid;
+}
+
+.classic-5:before,
+.classic-5:after {
+	content: "Loading...";
+	grid-area: 1/1;
+	-webkit-mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
+	color: #0000;
+	text-shadow: 0 0 0 #000, 0 calc(var(--s, 1) * 1.2em) 0 #000;
+	animation: c5 1s infinite;
+}
+
+.classic-5:after {
+	-webkit-mask-position: 1ch 50%;
+	--s: -1;
+}
+
+@keyframes c5 {
+	80%, 100% {
+		text-shadow: 0 calc(var(--s, 1) * -1.2em) 0 #000, 0 0 0 #000
+	}
+}
+
+.classic-6 {
+	--w: 10ch;
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 30px;
+	letter-spacing: var(--w);
+	width: var(--w);
+	overflow: hidden;
+	white-space: nowrap;
+	text-shadow: calc(-1 * var(--w)) 0,
+	calc(-2 * var(--w)) 0,
+	calc(-3 * var(--w)) 0,
+	calc(-4 * var(--w)) 0,
+	calc(-5 * var(--w)) 0,
+	calc(-6 * var(--w)) 0,
+	calc(-7 * var(--w)) 0,
+	calc(-8 * var(--w)) 0,
+	calc(-9 * var(--w)) 0;
+	animation: c6 2s infinite;
+}
+
+.classic-6:before {
+	content: "Loading...";
+}
+
+@keyframes c6 {
+	20% {
+		text-shadow: calc(-1 * var(--w)) 0,
+		calc(-2 * var(--w)) 0 red,
+		calc(-3 * var(--w)) 0,
+		calc(-4 * var(--w)) 0 #ffa516,
+		calc(-5 * var(--w)) 0 #63fff4,
+		calc(-6 * var(--w)) 0,
+		calc(-7 * var(--w)) 0,
+		calc(-8 * var(--w)) 0 green,
+		calc(-9 * var(--w)) 0;
+	}
+	40% {
+		text-shadow: calc(-1 * var(--w)) 0,
+		calc(-2 * var(--w)) 0 red,
+		calc(-3 * var(--w)) 0 #e945e9,
+		calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0 green,
+		calc(-6 * var(--w)) 0 orange,
+		calc(-7 * var(--w)) 0,
+		calc(-8 * var(--w)) 0 green,
+		calc(-9 * var(--w)) 0;
+	}
+	60% {
+		text-shadow: calc(-1 * var(--w)) 0 lightblue,
+		calc(-2 * var(--w)) 0,
+		calc(-3 * var(--w)) 0 #e945e9,
+		calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0 green,
+		calc(-6 * var(--w)) 0,
+		calc(-7 * var(--w)) 0 yellow,
+		calc(-8 * var(--w)) 0 #ffa516,
+		calc(-9 * var(--w)) 0 red;
+	}
+	80% {
+		text-shadow: calc(-1 * var(--w)) 0 lightblue,
+		calc(-2 * var(--w)) 0 yellow,
+		calc(-3 * var(--w)) 0 #63fff4,
+		calc(-4 * var(--w)) 0 #ffa516,
+		calc(-5 * var(--w)) 0 red,
+		calc(-6 * var(--w)) 0,
+		calc(-7 * var(--w)) 0 grey,
+		calc(-8 * var(--w)) 0 #63fff4,
+		calc(-9 * var(--w)) 0;
+	}
+}
+
+
+.classic-7 {
+	--w: 10ch;
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 30px;
+	line-height: 1.2em;
+	letter-spacing: var(--w);
+	width: var(--w);
+	overflow: hidden;
+	white-space: nowrap;
+	color: transparent;
+	animation: c7 2s infinite;
+}
+
+.classic-7:before {
+	content: "Loading...";
+}
+
+@keyframes c7 {
+	0% {
+		text-shadow: calc( 0*var(--w)) -1.2em #000,calc(-1*var(--w)) -1.2em #000,calc(-2*var(--w)) -1.2em #000,calc(-3*var(--w)) -1.2em #000,calc(-4*var(--w)) -1.2em #000,
+			calc(-5*var(--w)) -1.2em #000,calc(-6*var(--w)) -1.2em #000,calc(-7*var(--w)) -1.2em #000,calc(-8*var(--w)) -1.2em #000,calc(-9*var(--w)) -1.2em #000
+	}
+	4% {
+		text-shadow: calc(0 * var(--w)) 0 #000,calc(-1*var(--w)) -1.2em #000,calc(-2*var(--w)) -1.2em #000,calc(-3*var(--w)) -1.2em #000,calc(-4*var(--w)) -1.2em #000,
+			calc(-5*var(--w)) -1.2em #000,calc(-6*var(--w)) -1.2em #000,calc(-7*var(--w)) -1.2em #000,calc(-8*var(--w)) -1.2em #000,calc(-9*var(--w)) -1.2em #000
+	}
+	8% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,calc(-2*var(--w)) -1.2em #000,calc(-3*var(--w)) -1.2em #000,calc(-4*var(--w)) -1.2em #000,
+			calc(-5*var(--w)) -1.2em #000,calc(-6*var(--w)) -1.2em #000,calc(-7*var(--w)) -1.2em #000,calc(-8*var(--w)) -1.2em #000,calc(-9*var(--w)) -1.2em #000
+	}
+	12% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000,calc(-3*var(--w)) -1.2em #000,calc(-4*var(--w)) -1.2em #000,
+			calc(-5*var(--w)) -1.2em #000,calc(-6*var(--w)) -1.2em #000,calc(-7*var(--w)) -1.2em #000,calc(-8*var(--w)) -1.2em #000,calc(-9*var(--w)) -1.2em #000
+	}
+	16% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000,calc(-4*var(--w)) -1.2em #000,
+			calc(-5*var(--w)) -1.2em #000,calc(-6*var(--w)) -1.2em #000,calc(-7*var(--w)) -1.2em #000,calc(-8*var(--w)) -1.2em #000,calc(-9*var(--w)) -1.2em #000
+	}
+	20% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+			calc(-5*var(--w)) -1.2em #000,calc(-6*var(--w)) -1.2em #000,calc(-7*var(--w)) -1.2em #000,calc(-8*var(--w)) -1.2em #000,calc(-9*var(--w)) -1.2em #000
+	}
+	24% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000,calc(-6*var(--w)) -1.2em #000,calc(-7*var(--w)) -1.2em #000,calc(-8*var(--w)) -1.2em #000,calc(-9*var(--w)) -1.2em #000
+	}
+	28% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000,calc(-7*var(--w)) -1.2em #000,calc(-8*var(--w)) -1.2em #000,calc(-9*var(--w)) -1.2em #000
+	}
+	32% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,calc(-8*var(--w)) -1.2em #000,calc(-9*var(--w)) -1.2em #000
+	}
+	36% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000,calc(-9*var(--w)) -1.2em #000
+	}
+	40%,
+	60% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	64% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 1.2em #000
+	}
+	68% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 1.2em #000, calc(-9 * var(--w)) 1.2em #000
+	}
+	72% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 1.2em #000, calc(-8 * var(--w)) 1.2em #000, calc(-9 * var(--w)) 1.2em #000
+	}
+	76% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 1.2em #000, calc(-7 * var(--w)) 1.2em #000, calc(-8 * var(--w)) 1.2em #000, calc(-9 * var(--w)) 1.2em #000
+	}
+	80% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 1.2em #000, calc(-6 * var(--w)) 1.2em #000, calc(-7 * var(--w)) 1.2em #000, calc(-8 * var(--w)) 1.2em #000, calc(-9 * var(--w)) 1.2em #000
+	}
+	84% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 1.2em #000,
+		calc(-5 * var(--w)) 1.2em #000, calc(-6 * var(--w)) 1.2em #000, calc(-7 * var(--w)) 1.2em #000, calc(-8 * var(--w)) 1.2em #000, calc(-9 * var(--w)) 1.2em #000
+	}
+	88% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 1.2em #000, calc(-4 * var(--w)) 1.2em #000,
+		calc(-5 * var(--w)) 1.2em #000, calc(-6 * var(--w)) 1.2em #000, calc(-7 * var(--w)) 1.2em #000, calc(-8 * var(--w)) 1.2em #000, calc(-9 * var(--w)) 1.2em #000
+	}
+	92% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 1.2em #000, calc(-3 * var(--w)) 1.2em #000, calc(-4 * var(--w)) 1.2em #000,
+		calc(-5 * var(--w)) 1.2em #000, calc(-6 * var(--w)) 1.2em #000, calc(-7 * var(--w)) 1.2em #000, calc(-8 * var(--w)) 1.2em #000, calc(-9 * var(--w)) 1.2em #000
+	}
+	96% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 1.2em #000, calc(-2 * var(--w)) 1.2em #000, calc(-3 * var(--w)) 1.2em #000, calc(-4 * var(--w)) 1.2em #000,
+		calc(-5 * var(--w)) 1.2em #000, calc(-6 * var(--w)) 1.2em #000, calc(-7 * var(--w)) 1.2em #000, calc(-8 * var(--w)) 1.2em #000, calc(-9 * var(--w)) 1.2em #000
+	}
+	100% {
+		text-shadow: calc(0 * var(--w)) 1.2em #000, calc(-1 * var(--w)) 1.2em #000, calc(-2 * var(--w)) 1.2em #000, calc(-3 * var(--w)) 1.2em #000, calc(-4 * var(--w)) 1.2em #000,
+		calc(-5 * var(--w)) 1.2em #000, calc(-6 * var(--w)) 1.2em #000, calc(-7 * var(--w)) 1.2em #000, calc(-8 * var(--w)) 1.2em #000, calc(-9 * var(--w)) 1.2em #000
+	}
+
+}
+
+
+.classic-8 {
+	--w: 10ch;
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 30px;
+	letter-spacing: calc(10 * var(--w));
+	width: var(--w);
+	overflow: hidden;
+	white-space: nowrap;
+	color: #0000;
+	animation: c8 3s infinite;
+}
+
+.classic-8:before {
+	content: "Loading...";
+}
+
+@keyframes c8 {
+	0% {
+		text-shadow: calc(9 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-11 * var(--w)) 0 #000, calc(-21 * var(--w)) 0 #000, calc(-31 * var(--w)) 0 #000,
+		calc(-41 * var(--w)) 0 #000, calc(-51 * var(--w)) 0 #000, calc(-61 * var(--w)) 0 #000, calc(-71 * var(--w)) 0 #000, calc(-81 * var(--w)) 0 #000
+	}
+	4% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-11 * var(--w)) 0 #000, calc(-21 * var(--w)) 0 #000, calc(-31 * var(--w)) 0 #000,
+		calc(-41 * var(--w)) 0 #000, calc(-51 * var(--w)) 0 #000, calc(-61 * var(--w)) 0 #000, calc(-71 * var(--w)) 0 #000, calc(-81 * var(--w)) 0 #000
+	}
+	8% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-10 * var(--w)) 0 #000, calc(-11 * var(--w)) 0 #000, calc(-21 * var(--w)) 0 #000, calc(-31 * var(--w)) 0 #000,
+		calc(-41 * var(--w)) 0 #000, calc(-51 * var(--w)) 0 #000, calc(-61 * var(--w)) 0 #000, calc(-71 * var(--w)) 0 #000, calc(-81 * var(--w)) 0 #000
+	}
+	12% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-10 * var(--w)) 0 #000, calc(-20 * var(--w)) 0 #000, calc(-21 * var(--w)) 0 #000, calc(-31 * var(--w)) 0 #000,
+		calc(-41 * var(--w)) 0 #000, calc(-51 * var(--w)) 0 #000, calc(-61 * var(--w)) 0 #000, calc(-71 * var(--w)) 0 #000, calc(-81 * var(--w)) 0 #000
+	}
+	16% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-10 * var(--w)) 0 #000, calc(-20 * var(--w)) 0 #000, calc(-30 * var(--w)) 0 #000, calc(-31 * var(--w)) 0 #000,
+		calc(-41 * var(--w)) 0 #000, calc(-51 * var(--w)) 0 #000, calc(-61 * var(--w)) 0 #000, calc(-71 * var(--w)) 0 #000, calc(-81 * var(--w)) 0 #000
+	}
+	20% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-10 * var(--w)) 0 #000, calc(-20 * var(--w)) 0 #000, calc(-30 * var(--w)) 0 #000, calc(-40 * var(--w)) 0 #000,
+		calc(-41 * var(--w)) 0 #000, calc(-51 * var(--w)) 0 #000, calc(-61 * var(--w)) 0 #000, calc(-71 * var(--w)) 0 #000, calc(-81 * var(--w)) 0 #000
+	}
+	24% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-10 * var(--w)) 0 #000, calc(-20 * var(--w)) 0 #000, calc(-30 * var(--w)) 0 #000, calc(-40 * var(--w)) 0 #000,
+		calc(-50 * var(--w)) 0 #000, calc(-51 * var(--w)) 0 #000, calc(-61 * var(--w)) 0 #000, calc(-71 * var(--w)) 0 #000, calc(-81 * var(--w)) 0 #000
+	}
+	28% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-10 * var(--w)) 0 #000, calc(-20 * var(--w)) 0 #000, calc(-30 * var(--w)) 0 #000, calc(-40 * var(--w)) 0 #000,
+		calc(-50 * var(--w)) 0 #000, calc(-60 * var(--w)) 0 #000, calc(-61 * var(--w)) 0 #000, calc(-71 * var(--w)) 0 #000, calc(-81 * var(--w)) 0 #000
+	}
+	32% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-10 * var(--w)) 0 #000, calc(-20 * var(--w)) 0 #000, calc(-30 * var(--w)) 0 #000, calc(-40 * var(--w)) 0 #000,
+		calc(-50 * var(--w)) 0 #000, calc(-60 * var(--w)) 0 #000, calc(-70 * var(--w)) 0 #000, calc(-71 * var(--w)) 0 #000, calc(-81 * var(--w)) 0 #000
+	}
+	36% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-10 * var(--w)) 0 #000, calc(-20 * var(--w)) 0 #000, calc(-30 * var(--w)) 0 #000, calc(-40 * var(--w)) 0 #000,
+		calc(-50 * var(--w)) 0 #000, calc(-60 * var(--w)) 0 #000, calc(-70 * var(--w)) 0 #000, calc(-80 * var(--w)) 0 #000, calc(-81 * var(--w)) 0 #000
+	}
+	40%,
+	60% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-10 * var(--w)) 0 #000, calc(-20 * var(--w)) 0 #000, calc(-30 * var(--w)) 0 #000, calc(-40 * var(--w)) 0 #000,
+		calc(-50 * var(--w)) 0 #000, calc(-60 * var(--w)) 0 #000, calc(-70 * var(--w)) 0 #000, calc(-80 * var(--w)) 0 #000, calc(-90 * var(--w)) 0 #000
+	}
+	64% {
+		text-shadow: calc(-9 * var(--w)) 0 #000, calc(-10 * var(--w)) 0 #000, calc(-20 * var(--w)) 0 #000, calc(-30 * var(--w)) 0 #000, calc(-40 * var(--w)) 0 #000,
+		calc(-50 * var(--w)) 0 #000, calc(-60 * var(--w)) 0 #000, calc(-70 * var(--w)) 0 #000, calc(-80 * var(--w)) 0 #000, calc(-90 * var(--w)) 0 #000
+	}
+	68% {
+		text-shadow: calc(-9 * var(--w)) 0 #000, calc(-19 * var(--w)) 0 #000, calc(-20 * var(--w)) 0 #000, calc(-30 * var(--w)) 0 #000, calc(-40 * var(--w)) 0 #000,
+		calc(-50 * var(--w)) 0 #000, calc(-60 * var(--w)) 0 #000, calc(-70 * var(--w)) 0 #000, calc(-80 * var(--w)) 0 #000, calc(-90 * var(--w)) 0 #000
+	}
+	72% {
+		text-shadow: calc(-9 * var(--w)) 0 #000, calc(-19 * var(--w)) 0 #000, calc(-29 * var(--w)) 0 #000, calc(-30 * var(--w)) 0 #000, calc(-40 * var(--w)) 0 #000,
+		calc(-50 * var(--w)) 0 #000, calc(-60 * var(--w)) 0 #000, calc(-70 * var(--w)) 0 #000, calc(-80 * var(--w)) 0 #000, calc(-90 * var(--w)) 0 #000
+	}
+	76% {
+		text-shadow: calc(-9 * var(--w)) 0 #000, calc(-19 * var(--w)) 0 #000, calc(-29 * var(--w)) 0 #000, calc(-39 * var(--w)) 0 #000, calc(-40 * var(--w)) 0 #000,
+		calc(-50 * var(--w)) 0 #000, calc(-60 * var(--w)) 0 #000, calc(-70 * var(--w)) 0 #000, calc(-80 * var(--w)) 0 #000, calc(-90 * var(--w)) 0 #000
+	}
+	80% {
+		text-shadow: calc(-9 * var(--w)) 0 #000, calc(-19 * var(--w)) 0 #000, calc(-29 * var(--w)) 0 #000, calc(-39 * var(--w)) 0 #000, calc(-49 * var(--w)) 0 #000,
+		calc(-50 * var(--w)) 0 #000, calc(-60 * var(--w)) 0 #000, calc(-70 * var(--w)) 0 #000, calc(-80 * var(--w)) 0 #000, calc(-90 * var(--w)) 0 #000
+	}
+	84% {
+		text-shadow: calc(-9 * var(--w)) 0 #000, calc(-19 * var(--w)) 0 #000, calc(-29 * var(--w)) 0 #000, calc(-39 * var(--w)) 0 #000, calc(-49 * var(--w)) 0 #000,
+		calc(-59 * var(--w)) 0 #000, calc(-60 * var(--w)) 0 #000, calc(-70 * var(--w)) 0 #000, calc(-80 * var(--w)) 0 #000, calc(-90 * var(--w)) 0 #000
+	}
+	88% {
+		text-shadow: calc(-9 * var(--w)) 0 #000, calc(-19 * var(--w)) 0 #000, calc(-29 * var(--w)) 0 #000, calc(-39 * var(--w)) 0 #000, calc(-49 * var(--w)) 0 #000,
+		calc(-59 * var(--w)) 0 #000, calc(-69 * var(--w)) 0 #000, calc(-70 * var(--w)) 0 #000, calc(-80 * var(--w)) 0 #000, calc(-90 * var(--w)) 0 #000
+	}
+	92% {
+		text-shadow: calc(-9 * var(--w)) 0 #000, calc(-19 * var(--w)) 0 #000, calc(-29 * var(--w)) 0 #000, calc(-39 * var(--w)) 0 #000, calc(-49 * var(--w)) 0 #000,
+		calc(-59 * var(--w)) 0 #000, calc(-69 * var(--w)) 0 #000, calc(-79 * var(--w)) 0 #000, calc(-80 * var(--w)) 0 #000, calc(-90 * var(--w)) 0 #000
+	}
+	96% {
+		text-shadow: calc(-9 * var(--w)) 0 #000, calc(-19 * var(--w)) 0 #000, calc(-29 * var(--w)) 0 #000, calc(-39 * var(--w)) 0 #000, calc(-49 * var(--w)) 0 #000,
+		calc(-59 * var(--w)) 0 #000, calc(-69 * var(--w)) 0 #000, calc(-79 * var(--w)) 0 #000, calc(-89 * var(--w)) 0 #000, calc(-90 * var(--w)) 0 #000
+	}
+	100% {
+		text-shadow: calc(-9 * var(--w)) 0 #000, calc(-19 * var(--w)) 0 #000, calc(-29 * var(--w)) 0 #000, calc(-39 * var(--w)) 0 #000, calc(-49 * var(--w)) 0 #000,
+		calc(-59 * var(--w)) 0 #000, calc(-69 * var(--w)) 0 #000, calc(-79 * var(--w)) 0 #000, calc(-89 * var(--w)) 0 #000, calc(-99 * var(--w)) 0 #000
+	}
+}
+
+
+.classic-9 {
+	--w: 10ch;
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 30px;
+	line-height: 1.2em;
+	letter-spacing: var(--w);
+	width: var(--w);
+	overflow: hidden;
+	white-space: nowrap;
+	color: #0000;
+	animation: c9 2s infinite linear;
+}
+
+.classic-9:before {
+	content: "Loading...";
+}
+
+@keyframes c9 {
+	0% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0
+	}
+	4% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0
+	}
+	8% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0
+	}
+	12% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0
+	}
+	16% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0
+	}
+	20% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0
+	}
+	24% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0
+	}
+	28% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0
+	}
+	32% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0
+	}
+	36% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0
+	}
+	40%,
+	60% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	64% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	68% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	72% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	76% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	80% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	84% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	88% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	92% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	96% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0 #000
+	}
+	100% {
+		text-shadow: calc(0 * var(--w)) 0, calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0, calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0,
+		calc(-5 * var(--w)) 0, calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0, calc(-9 * var(--w)) 0
+	}
+
+}
+
+.classic-10 {
+	--w: 10ch;
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 30px;
+	line-height: 1.4em;
+	letter-spacing: var(--w);
+	width: var(--w);
+	overflow: hidden;
+	white-space: nowrap;
+	color: #0000;
+	text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+	calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+	animation: c10 2s infinite linear;
+}
+
+.classic-10:before {
+	content: "Loading...";
+}
+
+@keyframes c10 {
+	9.09% {
+		text-shadow: calc( 0*var(--w)) -10px #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	18.18% {
+		text-shadow: calc(0 * var(--w)) 0 #000,calc(-1*var(--w)) -10px #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	27.27% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,calc(-2*var(--w)) -10px #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	36.36% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000,calc(-3*var(--w)) -10px #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	45.45% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000,calc(-4*var(--w)) -10px #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	54.54% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+			calc(-5*var(--w)) -10px #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	63.63% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000,calc(-6*var(--w)) -10px #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	72.72% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000,calc(-7*var(--w)) -10px #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000
+	}
+	81.81% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,calc(-8*var(--w)) -10px #000, calc(-9 * var(--w)) 0 #000
+	}
+	90.90% {
+		text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+		calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000,calc(-9*var(--w)) -10px #000
+	}
+}
+
+.dots-1 {
+	width: 32px;
+	height: 32px;
+	--c: radial-gradient(circle closest-side, currentColor 90%, #0000);
+	background: var(--c) 0 0,
+	var(--c) 0 100%,
+	var(--c) 100% 100%;
+	background-size: 12px 12px;
+	background-repeat: no-repeat;
+	animation: d1 1s infinite linear;
+}
+
+@keyframes d1 {
+	25% {
+		background-position: 100% 0, 0 100%, 100% 100%
+	}
+	50% {
+		background-position: 100% 0, 0 0, 100% 100%
+	}
+	75% {
+		background-position: 100% 0, 0 0, 0 100%
+	}
+	100% {
+		background-position: 100% 100%, 0 0, 0 100%
+	}
+}
+
+.dots-2 {
+	width: 50px;
+	height: 28px;
+	--c: radial-gradient(farthest-side, currentColor 90%, #0000);
+	background: var(--c) 0 50%,
+	var(--c) 50% 50%,
+	var(--c) 50% 50%,
+	var(--c) 100% 50%;
+	background-size: 12px 12px;
+	background-repeat: no-repeat;
+	animation: d2 1s infinite linear;
+}
+
+@keyframes d2 {
+	33% {
+		background-position: 0 0, 50% 100%, 50% 100%, 100% 0
+	}
+	66% {
+		background-position: 50% 0, 0 100%, 100% 100%, 50% 0
+	}
+	100% {
+		background-position: 50% 50%, 0 50%, 100% 50%, 50% 50%
+	}
+}
+
+.dots-3 {
+	width: 50px;
+	height: 28px;
+	background: radial-gradient(farthest-side at bottom, currentColor 90%, #0000) 0 calc(50% - 3px),
+	radial-gradient(farthest-side at top, currentColor 90%, #0000) 0 calc(50% + 3px),
+	radial-gradient(farthest-side at bottom, currentColor 90%, #0000) 50% calc(50% - 3px),
+	radial-gradient(farthest-side at top, currentColor 90%, #0000) 50% calc(50% + 3px),
+	radial-gradient(farthest-side at bottom, currentColor 90%, #0000) 100% calc(50% - 3px),
+	radial-gradient(farthest-side at top, currentColor 90%, #0000) 100% calc(50% + 3px);
+	background-size: 12px 6px;
+	background-repeat: no-repeat;
+	animation: d3 1s infinite linear;
+}
+
+@keyframes d3 {
+	16.67% {
+		background-position: 0 0, 0 100%, 50% calc(50% - 3px), 50% calc(50% + 3px), 100% calc(50% - 3px), 100% calc(50% + 3px)
+	}
+	33.33% {
+		background-position: 0 0, 0 100%, 50% 0, 50% 100%, 100% calc(50% - 3px), 100% calc(50% + 3px)
+	}
+	50% {
+		background-position: 0 0, 0 100%, 50% 0, 50% 100%, 100% 0, 100% 100%
+	}
+	66.67% {
+		background-position: 0 calc(50% - 3px), 0 calc(50% + 3px), 50% 0, 50% 100%, 100% 0, 100% 100%
+	}
+	83.33% {
+		background-position: 0 calc(50% - 3px), 0 calc(50% + 3px), 50% calc(50% - 3px), 50% calc(50% + 3px), 100% 0, 100% 100%
+	}
+}
+
+
+//.dots-4 {
+//	width: 50px;
+//	height: 28px;
+//	background: radial-gradient(farthest-side, currentColor 90%, #0000) no-repeat 0 50%/12px 12px,
+//	radial-gradient(farthest-side at bottom, currentColor 90%, #0000) no-repeat 50% calc(50% - 3px)/12px 6px,
+//	radial-gradient(farthest-side at top, currentColor 90%, #0000) no-repeat 50% calc(50% + 3px)/12px 6px,
+//	radial-gradient(farthest-side at bottom, currentColor 90%, #0000) no-repeat 100% calc(50% - 3px)/12px 6px,
+//	radial-gradient(farthest-side at top, currentColor 90%, #0000) no-repeat 100% calc(50% + 3px)/12px 6px;
+//	animation: d4 1s infinite;
+//}
+//
+//@keyframes d4 {
+//	25% {
+//		background-position: 0 50%, 50% 0, 50% 100%, 100% 0, 100% 100%
+//	}
+//	50% {
+//		background-position: 100% 50%, 0 0, 0 100%, 50% 0, 50% 100%
+//	}
+//	75%,
+//	100% {
+//		background-position: 100% 50%, 0 calc(50% - 3px), 0 calc(50% + 3px), 50% calc(50% - 3px), 50% calc(50% + 3px)
+//	}
+//}
+
+.dots-5 {
+	width: 50px;
+	height: 12px;
+	background: radial-gradient(farthest-side, currentColor 90%, #0000) no-repeat left,
+	radial-gradient(farthest-side, currentColor 90%, #0000) no-repeat right;
+	background-size: 12px 12px;
+	position: relative;
+	animation: d5-0 1s infinite linear;
+}
+
+.dots-5::before {
+	content: "";
+	position: absolute;
+	background: currentColor;
+	border-radius: 50%;
+	inset: 0 calc(50% - 6px);
+	transform-origin: -13px 50%;
+	animation: d5-1 0.5s infinite linear;
+}
+
+@keyframes d5-0 {
+	0%, 49.99% {
+		transform: scale(1)
+	}
+	50%, 100% {
+		transform: scale(-1)
+	}
+}
+
+@keyframes d5-1 {
+	80%, 100% {
+		transform: rotate(1turn)
+	}
+}
+
+.dots-6 {
+	width: 30px;
+	height: 27.6px;
+	--c: radial-gradient(farthest-side, currentColor 90%, #0000);
+	background: var(--c) 50% 0,
+	var(--c) 0 100%,
+	var(--c) 100% 100%;
+	background-size: 12px 12px;
+	background-repeat: no-repeat;
+	position: relative;
+	animation: d6 1s infinite;
+}
+
+@keyframes d6 {
+	50%, 100% {
+		background-position: 100% 100%, 50% 0, 0 100%
+	}
+}
+
+.dots-7 {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	clip-path: inset(-25px -100px);
+	box-shadow: 19px -40px,38px -40px,57px -40px;
+	transform: translateX(-38px);
+	animation: d7 1s infinite;
+}
+
+@keyframes d7 {
+	16.67% {
+		box-shadow: 19px 0,38px -40px,57px -40px
+	}
+	33.33% {
+		box-shadow: 19px 0, 38px 0,57px -40px
+	}
+	45%, 55% {
+		box-shadow: 19px 0, 38px 0, 57px 0
+	}
+	66.67% {
+		box-shadow: 19px 40px, 38px 0, 57px 0
+	}
+	83.33% {
+		box-shadow: 19px 40px, 38px 40px, 57px 0
+	}
+	100% {
+		box-shadow: 19px 40px, 38px 40px, 57px 40px
+	}
+}
+
+
+.dots-8 {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: currentColor;
+	box-shadow: -19px 0, 19px 0;
+	animation: d8 1s infinite;
+}
+
+@keyframes d8 {
+	25% {
+		box-shadow: -19px -19px, 19px 19px
+	}
+	50% {
+		box-shadow: 0 -19px, 0 19px
+	}
+	75% {
+		box-shadow: 19px -19px, -19px 19px
+	}
+	100% {
+		box-shadow: 19px 0, -19px 0
+	}
+}
+
+.dots-9 {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	clip-path: inset(-45px);
+	box-shadow: -60px 15px, -60px 15px, -60px 15px;
+	transform: translateY(-15px);
+	animation: d9 1s infinite linear;
+}
+
+@keyframes d9 {
+	16.67% {
+		box-shadow: -60px 15px, -60px 15px, 19px 15px
+	}
+	33.33% {
+		box-shadow: -60px 15px, 0 15px, 19px 15px
+	}
+	40%, 60% {
+		box-shadow: -19px 15px, 0 15px, 19px 15px
+	}
+	66.67% {
+		box-shadow: -19px 15px, 0 15px, 60px 15px
+	}
+	83.33% {
+		box-shadow: -19px 15px, 60px 15px, 60px 15px
+	}
+	100% {
+		box-shadow: 60px 15px, 60px 15px, 60px 15px
+	}
+}
+
+
+.dots-10 {
+	width: 76px;
+	height: 12px;
+	display: flex;
+}
+
+.dots-10:before,
+.dots-10:after {
+	content: "";
+	flex: 1;
+	background: radial-gradient(farthest-side, currentColor 90%, #0000) center/12px 100%,
+	radial-gradient(farthest-side at right, currentColor 90%, #0000) right /6px  100%;
+	background-repeat: no-repeat;
+	transform: scale(var(--s, 1)) translate(0px) rotate(0);
+	animation: d10 2s infinite;
+}
+
+.dots-10:after {
+	--s: -1;
+}
+
+@keyframes d10 {
+	25% {
+		transform: scale(var(--s, 1)) translate(-10px) rotate(0);
+	}
+	50% {
+		transform: scale(var(--s, 1)) translate(-10px) rotate(1turn);
+	}
+	75%, 100% {
+		transform: scale(var(--s, 1)) translate(0px) rotate(1turn);
+	}
+}
+
+.hypnotic-1 {
+	width: 50px;
+	height: 50px;
+	border: 2px solid;
+	display: grid;
+	animation: h1 4s infinite linear;
+}
+
+.hypnotic-1::before,
+.hypnotic-1::after {
+	content: "";
+	grid-area: 1/1;
+	margin: auto;
+	width: 70.7%;
+	height: 70.7%;
+	border: 2px solid;
+	animation: inherit;
+}
+
+.hypnotic-1::after {
+	width: 50%;
+	height: 50%;
+	border: 2px solid;
+	animation-duration: 2s;
+}
+
+@keyframes h1 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.hypnotic-2 {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid;
+	position: relative;
+	transform-origin: left;
+	animation: h2 1s infinite linear;
+}
+
+.hypnotic-2::before,
+.hypnotic-2::after {
+	content: "";
+	position: absolute;
+	inset: 0 0 auto;
+	margin: auto;
+	width: 50%;
+	height: 50%;
+	border-radius: 50%;
+	border: 2px solid;
+	transform-origin: 50% calc(100% - 4px);
+	animation: inherit;
+}
+
+.hypnotic-2::after {
+	inset: auto 0 calc(100% + 2px);
+	animation-duration: 0.5s;
+	animation-direction: reverse;
+	transform-origin: 50% calc(200% - 2px);
+}
+
+@keyframes h2 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.hypnotic-3 {
+	width: 50px;
+	height: 50px;
+	border: 2px solid;
+	background: conic-gradient(from -90deg at calc(100% - 2px) calc(100% - 2px), #0000 0 90deg, currentColor 0),
+	conic-gradient(from -90deg at calc(100% - 2px) calc(100% - 2px), #0000 0 90deg, currentColor 0);
+	background-size: 16px 16px;
+	background-position: 0 0;
+	animation: h3 1s infinite;
+}
+
+@keyframes h3 {
+	100% {
+		background-position: -16px -16px, 16px 16px
+	}
+}
+
+.hypnotic-4 {
+	width: 50px;
+	height: 50px;
+	border: 2px solid;
+	background: radial-gradient(farthest-side, #0000 calc(100% - 3px), currentColor calc(100% - 2px) 98%, #0000),
+	radial-gradient(farthest-side, #0000 calc(100% - 3px), currentColor calc(100% - 2px) 98%, #0000);
+	background-size: 23px 23px;
+	background-position: 0 0, 12px 12px;
+	animation: h4 1s infinite;
+}
+
+@keyframes h4 {
+	100% {
+		background-position: -23px 0, 12px 35px
+	}
+}
+
+.hypnotic-5 {
+	width: 50px;
+	height: calc(50px * 0.866);
+	display: grid;
+	background: linear-gradient(to bottom left, #0000 calc(50% - 1px), currentColor 0 calc(50% + 1px), #0000 0) right/50% 100%,
+	linear-gradient(to bottom right, #0000 calc(50% - 1px), currentColor 0 calc(50% + 1px), #0000 0) left /50% 100%,
+	linear-gradient(currentColor 0 0) bottom/100% 2px;
+	background-repeat: no-repeat;
+	transform-origin: 50% 66%;
+	animation: h5 4s infinite linear;
+}
+
+.hypnotic-5::before,
+.hypnotic-5::after {
+	content: "";
+	grid-area: 1/1;
+	background: inherit;
+	transform-origin: inherit;
+	animation: inherit;
+}
+
+.hypnotic-5::after {
+	animation-duration: 2s;
+}
+
+@keyframes h5 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.hypnotic-6 {
+	width: 50px;
+	height: 50px;
+	display: grid;
+	background: linear-gradient(90deg, currentColor 2px, #0000 0 calc(100% - 2px), currentColor 0) center/100% 14px,
+	linear-gradient(0deg, currentColor 2px, #0000 0 calc(100% - 2px), currentColor 0) center/14px 100%,
+	linear-gradient(currentColor 0 0) center/100% 2px,
+	linear-gradient(currentColor 0 0) center/2px 100%;
+	background-repeat: no-repeat;
+	animation: h6 4s infinite linear;
+}
+
+.hypnotic-6::before,
+.hypnotic-6::after {
+	content: "";
+	grid-area: 1/1;
+	background: inherit;
+	transform-origin: inherit;
+	animation: inherit;
+}
+
+.hypnotic-6::after {
+	animation-duration: 2s;
+}
+
+@keyframes h6 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+
+.hypnotic-7 {
+	width: 50px;
+	height: 50px;
+	border: 2px solid;
+	background: repeating-conic-gradient(#0000 0 90deg, currentColor 0 180deg),
+	repeating-conic-gradient(currentColor 0 90deg, #0000 0 180deg);
+	background-size: 16px 16px;
+	background-position: 0 0;
+	animation: h7 2s infinite;
+}
+
+@keyframes h7 {
+	100% {
+		background-position: 0 32px, 16px 0
+	}
+}
+
+.hypnotic-8 {
+	width: 50px;
+	height: 50px;
+	border: 2px solid;
+	background: radial-gradient(farthest-side, currentColor 90%, #0000) left top,
+	radial-gradient(farthest-side, #0000 90%, currentColor) left top;
+	background-size: 16px 16px;
+	animation: h8 2s infinite;
+}
+
+@keyframes h8 {
+	100% {
+		background-position: 0 32px, -16px 0
+	}
+}
+
+.hypnotic-9 {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	border-radius: 50%;
+	background: repeating-conic-gradient(#0000, currentColor 1deg 18deg, #0000 20deg 36deg);
+	animation: h9 4s infinite linear;
+}
+
+.hypnotic-9::before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	inset: 0;
+	background: inherit;
+	animation: inherit;
+}
+
+@keyframes h9 {
+	100% {
+		transform: rotate(.5turn)
+	}
+}
+
+.hypnotic-10 {
+	width: 50px;
+	height: 50px;
+	display: grid;
+}
+
+.hypnotic-10::before,
+.hypnotic-10::after {
+	content: "";
+	grid-area: 1/1;
+	border-radius: 50%;
+	background: repeating-conic-gradient(#0000, currentColor 1deg 18deg, #0000 20deg 36deg);
+	-webkit-mask: -repeating-webkit-gradient(farthest-side, #000 0 10%, #0000 0 20%);
+	animation: h10 4s infinite linear;
+}
+
+.hypnotic-10::after {
+	-webkit-mask: -repeating-webkit-gradient(farthest-side, #0000 0 10%, #000 0 20%);
+	animation-direction: reverse;
+}
+
+@keyframes h10 {
+	100% {
+		transform: rotate(.5turn)
+	}
+}
+
+
+/*.spinner-1 {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	padding: 6px;
+	background: conic-gradient(from 135deg at top, currentColor 90deg, #0000 0) 0 calc(50% - 4px)/17px 8.5px,
+	radial-gradient(farthest-side at bottom left, #0000 calc(100% - 6px), currentColor calc(100% - 5px) 99%, #0000) top right/50%  50% content-box content-box,
+	radial-gradient(farthest-side at top, #0000 calc(100% - 6px), currentColor calc(100% - 5px) 99%, #0000) bottom   /100% 50% content-box content-box;
+	background-repeat: no-repeat;
+	animation: s1 1s infinite linear;
+}
+
+@keyframes s1 {
+	100% {
+		transform: rotate(1turn)
+	}
+}*/
+
+.spinner-2 {
+	width: 50px;
+	height: 50px;
+	display: grid;
+}
+
+.spinner-2::before,
+.spinner-2::after {
+	content: "";
+	grid-area: 1/1;
+	--c: radial-gradient(farthest-side, #25b09b 92%, #0000);
+	background: var(--c) 50% 0,
+	var(--c) 50% 100%,
+	var(--c) 100% 50%,
+	var(--c) 0 50%;
+	background-size: 12px 12px;
+	background-repeat: no-repeat;
+	animation: s2 1s infinite;
+}
+
+.spinner-2::before {
+	margin: 4px;
+	filter: hue-rotate(45deg);
+	background-size: 8px 8px;
+	animation-timing-function: linear
+}
+
+@keyframes s2 {
+	100% {
+		transform: rotate(.5turn)
+	}
+}
+
+.spinner-3 {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: radial-gradient(farthest-side, #ffa516 94%, #0000) top/8px 8px no-repeat,
+	conic-gradient(#0000 30%, #ffa516);
+	-webkit-mask: -webkit-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+	animation: s3 1s infinite linear;
+}
+
+@keyframes s3 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.spinner-4 {
+	width: 50px;
+	height: 50px;
+	display: grid;
+	animation: s4 4s infinite;
+}
+
+.spinner-4::before,
+.spinner-4::after {
+	content: "";
+	grid-area: 1/1;
+	border: 8px solid;
+	border-radius: 50%;
+	border-color: red red #0000 #0000;
+	mix-blend-mode: darken;
+	animation: s4 1s infinite linear;
+}
+
+.spinner-4::after {
+	border-color: #0000 #0000 blue blue;
+	animation-direction: reverse;
+}
+
+@keyframes s4 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+
+.spinner-5 {
+	width: 50px;
+	height: 50px;
+	display: grid;
+	border: 4px solid #0000;
+	border-radius: 50%;
+	border-right-color: #25b09b;
+	animation: s5 1s infinite linear;
+}
+
+.spinner-5::before,
+.spinner-5::after {
+	content: "";
+	grid-area: 1/1;
+	margin: 2px;
+	border: inherit;
+	border-radius: 50%;
+	animation: s5 2s infinite;
+}
+
+.spinner-5::after {
+	margin: 8px;
+	animation-duration: 3s;
+}
+
+@keyframes s5 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.spinner-6 {
+	width: 50px;
+	height: 50px;
+	display: grid;
+	border: 4px solid;
+	border-radius: 50%;
+	border-color: #ccc #0000;
+	animation: s6 1s infinite linear;
+}
+
+.spinner-6::before,
+.spinner-6::after {
+	content: "";
+	grid-area: 1/1;
+	margin: 2px;
+	border: inherit;
+	border-radius: 50%;
+}
+
+.spinner-6::before {
+	border-color: #f03355 #0000;
+	animation: inherit;
+	animation-duration: .5s;
+	animation-direction: reverse;
+}
+
+.spinner-6::after {
+	margin: 8px;
+}
+
+@keyframes s6 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.spinner-7 {
+	width: 70px;
+	height: 70px;
+	background: radial-gradient(farthest-side, #ffa516 90%, #0000) center/16px 16px,
+	radial-gradient(farthest-side, green 90%, #0000) bottom/12px 12px;
+	background-repeat: no-repeat;
+	animation: s7 1s infinite linear;
+	position: relative;
+}
+
+.spinner-7::before {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	inset: auto 0 16px;
+	margin: auto;
+	background: #ccc;
+	border-radius: 50%;
+	transform-origin: 50% calc(100% + 10px);
+	animation: inherit;
+	animation-duration: 0.5s;
+}
+
+
+@keyframes s7 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+
+.spinner-8 {
+	width: 50px;
+	height: 50px;
+	--c: radial-gradient(farthest-side, #514b82 92%, #0000);
+	background: var(--c) 50% 0,
+	var(--c) 50% 100%,
+	var(--c) 100% 50%,
+	var(--c) 0 50%;
+	background-size: 10px 10px;
+	background-repeat: no-repeat;
+	animation: s8 1s infinite;
+	position: relative;
+}
+
+.spinner-8::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	margin: 3px;
+	background: repeating-conic-gradient(#0000 0 35deg, #514b82 0 90deg);
+	-webkit-mask: -webkit-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+	border-radius: 50%;
+}
+
+@keyframes s8 {
+	100% {
+		transform: rotate(.5turn)
+	}
+}
+
+.spinner-9 {
+	width: 50px;
+	height: 50px;
+	display: grid;
+	color: #854f1d;
+	background: radial-gradient(farthest-side, currentColor calc(100% - 6px), #0000 calc(100% - 5px) 0);
+	-webkit-mask: -webkit-gradient(farthest-side, #0000 calc(100% - 13px), #000 calc(100% - 12px));
+	border-radius: 50%;
+	animation: s9 2s infinite linear;
+}
+
+.spinner-9::before,
+.spinner-9::after {
+	content: "";
+	grid-area: 1/1;
+	background: linear-gradient(currentColor 0 0) center,
+	linear-gradient(currentColor 0 0) center;
+	background-size: 100% 10px, 10px 100%;
+	background-repeat: no-repeat;
+}
+
+.spinner-9::after {
+	transform: rotate(45deg);
+}
+
+@keyframes s9 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.spinner-10 {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 8px solid #514b82;
+	animation: s10-1 0.8s infinite linear alternate,
+	s10-2 1.6s infinite linear;
+}
+
+@keyframes s10-1 {
+	0% {
+		clip-path: polygon(50% 50%, 0 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0)
+	}
+	12.5% {
+		clip-path: polygon(50% 50%, 0 0, 50% 0, 100% 0, 100% 0, 100% 0, 100% 0)
+	}
+	25% {
+		clip-path: polygon(50% 50%, 0 0, 50% 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+	}
+	50% {
+		clip-path: polygon(50% 50%, 0 0, 50% 0, 100% 0, 100% 100%, 50% 100%, 0 100%)
+	}
+	62.5% {
+		clip-path: polygon(50% 50%, 100% 0, 100% 0, 100% 0, 100% 100%, 50% 100%, 0 100%)
+	}
+	75% {
+		clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0 100%)
+	}
+	100% {
+		clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0 100%)
+	}
+}
+
+@keyframes s10-2 {
+	0% {
+		transform: scaleY(1) rotate(0deg)
+	}
+	49.99% {
+		transform: scaleY(1) rotate(135deg)
+	}
+	50% {
+		transform: scaleY(-1) rotate(0deg)
+	}
+	100% {
+		transform: scaleY(-1) rotate(-135deg)
+	}
+}
+
+.shuriken-1 {
+	width: 80px;
+	height: 80px;
+	color: #8d7958;
+	background: conic-gradient(from 165deg at top, #0000, currentColor 1deg 30deg, #0000 31deg) top,
+	conic-gradient(from 75deg at left, #0000, currentColor 1deg 30deg, #0000 31deg) left,
+	conic-gradient(from  -15deg at bottom, #0000, currentColor 1deg 30deg, #0000 31deg) bottom,
+	conic-gradient(from -105deg at right, #0000, currentColor 1deg 30deg, #0000 31deg) right;
+	background-size: 100% 50%, 50% 100%;
+	-webkit-mask: -webkit-gradient(circle 5px, #0000 90%, #000);
+	background-repeat: no-repeat;
+	animation: sh1 1.5s infinite linear;
+}
+
+@keyframes sh1 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.shuriken-2 {
+	width: 80px;
+	height: 80px;
+	color: #8d7958;
+	background: conic-gradient(from 165deg at top, #0000, currentColor 1deg 30deg, #0000 31deg) top,
+	conic-gradient(from 75deg at left, #0000, currentColor 1deg 30deg, #0000 31deg) left,
+	conic-gradient(from  -15deg at bottom, #0000, currentColor 1deg 30deg, #0000 31deg) bottom,
+	conic-gradient(from -105deg at right, #0000, currentColor 1deg 30deg, #0000 31deg) right;
+	background-size: 100% 50%, 50% 100%;
+	-webkit-mask: -webkit-gradient(circle 5px, #0000 90%, #000);
+	background-repeat: no-repeat;
+	animation: sh2 1.5s infinite linear;
+}
+
+.shuriken-2:before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: inherit;
+	transform: rotate(45deg);
+}
+
+@keyframes sh2 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.shuriken-3 {
+	width: 80px;
+	height: 80px;
+	display: grid;
+	color: #8d7958;
+	-webkit-mask: -webkit-gradient(circle 5px, #0000 90%, #000);
+	animation: sh3 1.5s infinite linear;
+}
+
+.shuriken-3:before,
+.shuriken-3:after {
+	content: "";
+	grid-area: 1/1;
+	background: radial-gradient(farthest-side at bottom left, currentColor 94%, #0000) top left,
+	radial-gradient(farthest-side at top right, currentColor 94%, #0000) bottom right;
+	background-size: 63% 50%;
+	background-repeat: no-repeat;
+	-webkit-mask: -webkit-gradient(65% 110% at bottom left, #0000 94%, #000) top left,
+	-webkit-gradient(65% 110% at top right, #0000 94%, #000) bottom right;
+	-webkit-mask-size: 62% 50%;
+	-webkit-mask-repeat: no-repeat;
+}
+
+.shuriken-3:after {
+	transform: rotate(90deg);
+}
+
+@keyframes sh3 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.shuriken-4 {
+	width: calc(80px * 0.707);
+	height: calc(80px * 0.707);
+	background: #8d7958;
+	clip-path: polygon(0 0, 50% 15%, 100% 0, 85% 50%, 100% 100%, 50% 85%, 0 100%, 15% 50%);
+	-webkit-mask: radial-gradient(circle closest-side, #0000 92%, #000) top   /100% 33.4%,
+	radial-gradient(circle closest-side, #0000 92%, #000) left  /33.4%  33.4%,
+	radial-gradient(circle 5px, #0000 92%, #000) center/33.3%  33.3%,
+	radial-gradient(circle closest-side, #0000 92%, #000) right /33.4%  33.4%,
+	radial-gradient(circle closest-side, #0000 92%, #000) bottom/100% 33.4%;
+	-webkit-mask-repeat: no-repeat;
+	animation: sh4 1.5s infinite linear;
+}
+
+@keyframes sh4 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.shuriken-5 {
+	width: 80px;
+	height: 80px;
+	color: #8d7958;
+	background: linear-gradient(currentColor 0 0) center/100% 15px,
+	linear-gradient(currentColor 0 0) center/15px 100%,
+	radial-gradient(circle 15px, currentColor 94%, #0000);
+	background-repeat: no-repeat;
+	-webkit-mask: -webkit-gradient(circle 5px, #0000 90%, #000);
+	clip-path: polygon(0 30px, calc(100% - 30px) 0, 100% calc(100% - 30px), 30px 100%);
+	animation: sh5 1.5s infinite linear;
+}
+
+@keyframes sh5 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+/*.shuriken-6 {
+	width: 80px;
+	height: 80px;
+	display: grid;
+	color: #8d7958;
+	background: conic-gradient(from -153deg at right, #0000, currentColor 1deg 126deg, #0000 127deg) calc(50% + 5px) 0   /10px 50%,
+	conic-gradient(from 27deg at left, #0000, currentColor 1deg 126deg, #0000 127deg) calc(50% - 5px) 100%/10px 50%,
+	linear-gradient(to top right, currentColor 50%, #0000 0) calc(50% + 10px) calc(50% - 10px) /20px 20px,
+	linear-gradient(to bottom left, currentColor 50%, #0000 0) calc(50% - 10px) calc(50% + 10px) /20px 20px;
+	background-repeat: no-repeat;
+	-webkit-mask: -webkit-gradient(circle 5px, #0000 90%, #000);
+	animation: sh6 1.5s infinite linear;
+}
+
+.shuriken-6:before,
+.shuriken-6:after {
+	content: "";
+	grid-area: 1/1;
+	background: inherit;
+	transform: rotate(60deg);
+}
+
+.shuriken-6:after {
+	transform: rotate(120deg);
+}
+
+@keyframes sh6 {
+	100% {
+		transform: rotate(1turn)
+	}
+}*/
+
+.shuriken-7 {
+	width: 80px;
+	height: 80px;
+	color: #8d7958;
+	background: radial-gradient(150% 150% at left  -40% top -40%, #0000 98%, currentColor) no-repeat left top,
+	radial-gradient(150% 150% at right -40% top -40%, #0000 98%, currentColor) no-repeat right top,
+	radial-gradient(150% 150% at left  -40% bottom -40%, #0000 98%, currentColor) no-repeat left bottom,
+	radial-gradient(150% 150% at right -40% bottom -40%, #0000 98%, currentColor) no-repeat right bottom;
+	background-size: 50.3% 50.3%;
+	-webkit-mask: -webkit-gradient(circle 5px, #0000 90%, #000);
+	animation: sh7 1.5s infinite linear;
+}
+
+
+@keyframes sh7 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.shuriken-8 {
+	width: 80px;
+	height: 80px;
+	--c: #8d7958 91%, #0000;
+	background: radial-gradient(30% 50% at -3px             55%, var(--c)) top right,
+	radial-gradient(30% 50% at -3px             45%, var(--c)) bottom right,
+	radial-gradient(30% 50% at calc(100% + 3px) 55%, var(--c)) top left,
+	radial-gradient(30% 50% at calc(100% + 3px) 45%, var(--c)) bottom left,
+	radial-gradient(50% 30% at 45% calc(100% + 3px), var(--c)) top right,
+	radial-gradient(50% 30% at 45% -3px            , var(--c)) bottom right,
+	radial-gradient(50% 30% at 55% calc(100% + 3px), var(--c)) top left,
+	radial-gradient(50% 30% at 55% -3px            , var(--c)) bottom left;
+	background-size: 50.1% 50.1%;
+	background-repeat: no-repeat;
+	-webkit-mask: -webkit-gradient(circle 5px, #0000 90%, #000);
+	animation: sh8 1.5s infinite linear;
+}
+
+@keyframes sh8 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.shuriken-9 {
+	width: 80px;
+	height: 80px;
+	--c: #8d7958 98%, #0000;
+	background: radial-gradient(50% 70% at 50% 120%, var(--c)) top,
+	radial-gradient(70% 50% at -20% 50%, var(--c)) right,
+	radial-gradient(50% 70% at 50% -20%, var(--c)) bottom,
+	radial-gradient(70% 50% at 120% 50%, var(--c)) left;
+	background-size: 100% 50.1%, 50.1% 100%;
+	background-repeat: no-repeat;
+	-webkit-mask: -webkit-gradient(circle 5px, #0000 90%, #000);
+	animation: sh9 1.5s infinite linear;
+}
+
+@keyframes sh9 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+.shuriken-10 {
+	width: 80px;
+	height: 80px;
+	display: grid;
+	color: #8d7958;
+	background: radial-gradient(circle 16px, currentColor 94%, #0000);
+	-webkit-mask: -webkit-gradient(circle 5px, #0000 90%, #000);
+	animation: sh10 1.5s infinite linear;
+}
+
+.shuriken-10:before,
+.shuriken-10:after {
+	content: "";
+	grid-area: 1/1;
+	background: radial-gradient(farthest-side at bottom right, currentColor 94%, #0000) top right,
+	radial-gradient(farthest-side at top left, currentColor 94%, #0000) bottom left;
+	background-size: 40% 45%;
+	background-repeat: no-repeat;
+	-webkit-mask: -webkit-gradient(60% 100% at bottom right, #0000 94%, #000) top right,
+	-webkit-gradient(60% 100% at top left, #0000 94%, #000) bottom left;
+	-webkit-mask-size: 40% 45%;
+	-webkit-mask-repeat: no-repeat;
+}
+
+.shuriken-10:after {
+	transform: rotate(90deg);
+}
+
+@keyframes sh10 {
+	100% {
+		transform: rotate(1turn)
+	}
+}
+
+
+.progress-1 {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	animation: p1 2s infinite;
+}
+
+@keyframes p1 {
+	0% {
+		background: conic-gradient(#f03355 0, #0000 0)
+	}
+	12.5% {
+		background: conic-gradient(#f03355 45deg, #0000 46deg)
+	}
+	25% {
+		background: conic-gradient(#f03355 90deg, #0000 91deg)
+	}
+	37.5% {
+		background: conic-gradient(#f03355 135deg, #0000 136deg)
+	}
+	50% {
+		background: conic-gradient(#f03355 180deg, #0000 181deg)
+	}
+	62.5% {
+		background: conic-gradient(#f03355 225deg, #0000 226deg)
+	}
+	75% {
+		background: conic-gradient(#f03355 270deg, #0000 271deg)
+	}
+	87.5% {
+		background: conic-gradient(#f03355 315deg, #0000 316deg)
+	}
+	100% {
+		background: conic-gradient(#f03355 360deg, #0000 360deg)
+	}
+}
+
+.progress-2 {
+	width: 120px;
+	height: 20px;
+	background: linear-gradient(#000 50%, #0000 0),
+	linear-gradient(#0000 50%, #000 0),
+	linear-gradient(#000 50%, #0000 0),
+	linear-gradient(#0000 50%, #000 0),
+	linear-gradient(#000 50%, #0000 0),
+	linear-gradient(#0000 50%, #000 0) #ddd;
+	background-size: calc(100% / 6 + 1px) 200%;
+	background-repeat: no-repeat;
+	animation: p2 2s infinite;
+}
+
+@keyframes p2 {
+	0% {
+		background-position: calc(0 * 100% / 5) 100%, calc(1 * 100% / 5) 0, calc(2 * 100% / 5) 100%, calc(3 * 100% / 5) 0, calc(4 * 100% / 5) 100%, calc(5 * 100% / 5) 0
+	}
+	16.67% {
+		background-position: calc(0 * 100% / 5) 0, calc(1 * 100% / 5) 0, calc(2 * 100% / 5) 100%, calc(3 * 100% / 5) 0, calc(4 * 100% / 5) 100%, calc(5 * 100% / 5) 0
+	}
+	33.33% {
+		background-position: calc(0 * 100% / 5) 0, calc(1 * 100% / 5) 100%, calc(2 * 100% / 5) 100%, calc(3 * 100% / 5) 0, calc(4 * 100% / 5) 100%, calc(5 * 100% / 5) 0
+	}
+	50% {
+		background-position: calc(0 * 100% / 5) 0, calc(1 * 100% / 5) 100%, calc(2 * 100% / 5) 0, calc(3 * 100% / 5) 0, calc(4 * 100% / 5) 100%, calc(5 * 100% / 5) 0
+	}
+	66.67% {
+		background-position: calc(0 * 100% / 5) 0, calc(1 * 100% / 5) 100%, calc(2 * 100% / 5) 0, calc(3 * 100% / 5) 100%, calc(4 * 100% / 5) 100%, calc(5 * 100% / 5) 0
+	}
+	83.33% {
+		background-position: calc(0 * 100% / 5) 0, calc(1 * 100% / 5) 100%, calc(2 * 100% / 5) 0, calc(3 * 100% / 5) 100%, calc(4 * 100% / 5) 0, calc(5 * 100% / 5) 0
+	}
+	100% {
+		background-position: calc(0 * 100% / 5) 0, calc(1 * 100% / 5) 100%, calc(2 * 100% / 5) 0, calc(3 * 100% / 5) 100%, calc(4 * 100% / 5) 0, calc(5 * 100% / 5) 100%
+	}
+}
+
+.progress-3 {
+	width: 124px;
+	height: 24px;
+	-webkit-mask: conic-gradient(from 135deg at top, #0000, #000 .5deg 90deg, #0000 90.5deg) 0 0,
+	conic-gradient(from -45deg at bottom, #0000, #000 .5deg 90deg, #0000 90.5deg) 0 100%;
+	-webkit-mask-size: 25% 50%;
+	-webkit-mask-repeat: repeat-x;
+	background: linear-gradient(#25b09b 0 0) left/0% 100% no-repeat #ddd;
+	animation: p3 2s infinite linear;
+}
+
+@keyframes p3 {
+	100% {
+		background-size: 100% 100%
+	}
+}
+
+/*.progress-4 {
+	width: 60px;
+	height: 50px;
+	-webkit-mask: linear-gradient(90deg, #000 70%, #0000 0) calc(0 * 100% / 4) 100%/calc(100%/5) calc(1 * 100% / 5),
+	linear-gradient(90deg, #000 70%, #0000 0) calc(1 * 100% / 4) 100%/calc(100%/5) calc(2 * 100% / 5),
+	linear-gradient(90deg, #000 70%, #0000 0) calc(2 * 100% / 4) 100%/calc(100%/5) calc(3 * 100% / 5),
+	linear-gradient(90deg, #000 70%, #0000 0) calc(3 * 100% / 4) 100%/calc(100%/5) calc(4 * 100% / 5),
+	linear-gradient(90deg, #000 70%, #0000 0) calc(4 * 100% / 4) 100%/calc(100%/5) calc(5 * 100% / 5);
+	-webkit-mask-repeat: no-repeat;
+	background: linear-gradient(#514b82 0 0) left/0% 100% no-repeat #ddd;
+	animation: p4 2s infinite steps(6);
+}
+
+@keyframes p4 {
+	100% {
+		background-size: 120% 100%
+	}
+}*/
+
+.progress-5 {
+	width: 80px;
+	height: calc(80px * 0.866);
+	clip-path: polygon(50% 0, 100% 100%, 0 100%);
+	color: #f03355;
+	background: linear-gradient(currentColor 0 0) no-repeat,
+	linear-gradient(currentColor 0 0) no-repeat,
+	linear-gradient(currentColor 0 0) no-repeat,
+	linear-gradient(currentColor 0 0) no-repeat,
+	linear-gradient(currentColor 0 0) no-repeat;
+	background-size: 100% calc(100% / 5 + 1px);
+	animation: p5 2s infinite;
+}
+
+@keyframes p5 {
+	0% {
+		background-position: 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4)
+	}
+	20% {
+		background-position: 0 calc(4 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4)
+	}
+	40% {
+		background-position: 0 calc(4 * 100% / 4), 0 calc(3 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4)
+	}
+	60% {
+		background-position: 0 calc(4 * 100% / 4), 0 calc(3 * 100% / 4), 0 calc(2 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4)
+	}
+	80% {
+		background-position: 0 calc(4 * 100% / 4), 0 calc(3 * 100% / 4), 0 calc(2 * 100% / 4), 0 calc(1 * 100% / 4), 0 calc(-2 * 100% / 4)
+	}
+	100% {
+		background-position: 0 calc(4 * 100% / 4), 0 calc(3 * 100% / 4), 0 calc(2 * 100% / 4), 0 calc(1 * 100% / 4), 0 calc(0 * 100% / 4)
+	}
+}
+
+
+.progress-6 {
+	height: 4px;
+	width: 130px;
+	background: linear-gradient(#6100ee 0 0),
+	linear-gradient(#6100ee 0 0),
+	#d7b8fc;
+	background-size: 60% 100%;
+	background-repeat: no-repeat;
+	animation: p6 3s infinite;
+}
+
+@keyframes p6 {
+	0% {
+		background-position: -150% 0, -150% 0
+	}
+	66% {
+		background-position: 250% 0, -150% 0
+	}
+	100% {
+		background-position: 250% 0, 250% 0
+	}
+}
+
+.progress-7 {
+	width: 120px;
+	height: 20px;
+	-webkit-mask: radial-gradient(circle closest-side, #000 94%, #0000) left/20% 100%;
+	background: linear-gradient(#000 0 0) left/0% 100% no-repeat #ddd;
+	animation: p7 2s infinite steps(6);
+}
+
+@keyframes p7 {
+	100% {
+		background-size: 120% 100%
+	}
+}
+
+.progress-8 {
+	width: 60px;
+	height: 60px;
+	border: 15px solid #ddd;
+	border-radius: 50%;
+	position: relative;
+	transform: rotate(45deg);
+}
+
+.progress-8::before {
+	content: "";
+	position: absolute;
+	inset: -15px;
+	border-radius: 50%;
+	border: 15px solid #514b82;
+	animation: p8 2s infinite linear;
+}
+
+@keyframes p8 {
+	0% {
+		clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+	}
+	25% {
+		clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+	}
+	50% {
+		clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+	}
+	75% {
+		clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+	}
+	100% {
+		clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+	}
+}
+
+.progress-9 {
+	width: 60px;
+	height: 60px;
+	background: linear-gradient(#dc1818 0 0) bottom/100% 0 no-repeat #ccc;
+	-webkit-mask: -webkit-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left,
+	-webkit-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right,
+	-webkit-gradient(to bottom left, #000 42%, #0000 43%) bottom left,
+	-webkit-gradient(to bottom right, #000 42%, #0000 43%) bottom right;
+	-webkit-mask-size: 50% 50%;
+	-webkit-mask-repeat: no-repeat;
+	animation: p9 2s infinite linear;
+}
+
+@keyframes p9 {
+	90%, 100% {
+		background-size: 100% 100%
+	}
+}
+
+.progress-10 {
+	--s: 40px;
+	height: calc(var(--s) * 0.9);
+	width: calc(var(--s) * 5);
+	--v1: transparent, #000 0.5deg 108deg, #0000 109deg;
+	--v2: transparent, #000 0.5deg 36deg, #0000 37deg;
+	-webkit-mask: conic-gradient(from 54deg at calc(var(--s) * 0.68) calc(var(--s) * 0.57), var(--v1)),
+	conic-gradient(from 90deg at calc(var(--s) * 0.02) calc(var(--s) * 0.35), var(--v2)),
+	conic-gradient(from 126deg at calc(var(--s) * 0.5) calc(var(--s) * 0.7), var(--v1)),
+	conic-gradient(from 162deg at calc(var(--s) * 0.5) 0, var(--v2));
+	-webkit-mask-size: var(--s) var(--s);
+	-webkit-mask-composite: xor, destination-over;
+	mask-composite: exclude, add;
+	-webkit-mask-repeat: repeat-x;
+	background: linear-gradient(#ffb940 0 0) left/0% 100% #ddd no-repeat;
+	animation: p10 2s infinite linear;
+}
+
+@keyframes p10 {
+	90%, 100% {
+		background-size: 100% 100%
+	}
+}
+
+.flipping-1 {
+	width: 40px;
+	height: 40px;
+	background: #000;
+	transform: perspective(150px) rotateX(0);
+	animation: f1 1s infinite;
+}
+
+@keyframes f1 {
+	100% {
+		transform: perspective(150px) rotateX(180deg)
+	}
+}
+
+.flipping-2 {
+	width: 40px;
+	height: 40px;
+	transform: perspective(150px) rotateX(0);
+	animation: f1-1 2s infinite linear,
+	f1-2 1s infinite linear alternate;
+}
+
+@keyframes f1-1 {
+	100% {
+		transform: perspective(150px) rotateX(360deg)
+	}
+}
+
+@keyframes f1-2 {
+	0%, 49.9% {
+		background: #ffa516
+	}
+	50%, 100% {
+		background: #f03355
+	}
+}
+
+
+.flipping-3 {
+	width: 40px;
+	height: 40px;
+	transform: perspective(150px) rotateX(0) rotateY(0);
+	animation: f3-1 2s infinite linear,
+	f3-2 3s infinite linear -.5s;
+}
+
+@keyframes f3-1 {
+	50% {
+		transform: perspective(150px) rotateX(180deg) rotateY(0)
+	}
+	100% {
+		transform: perspective(150px) rotateX(180deg) rotateY(180deg)
+	}
+}
+
+@keyframes f3-2 {
+	0%, 33% {
+		background: #ffa516
+	}
+	33.1%, 66% {
+		background: #f03355
+	}
+	66.1%, 100% {
+		background: #25b09b
+	}
+}
+
+.flipping-4 {
+	width: 60px;
+	height: 60px;
+	animation: f4-0 2s infinite linear;
+}
+
+.flipping-4::before {
+	content: "";
+	display: block;
+	width: 50%;
+	height: 50%;
+	transform: perspective(150px) rotateX(0deg);
+	transform-origin: bottom;
+	animation: f4-1 0.5s infinite linear alternate,
+	f4-2 0.5s infinite linear alternate;
+}
+
+@keyframes f4-0 {
+	0%, 24.99% {
+		transform: scale(1, 1) rotate(0deg)
+	}
+	25%, 49.99% {
+		transform: scale(1, -1) rotate(90deg)
+	}
+	50%, 74.99% {
+		transform: scale(-1, -1) rotate(0deg)
+	}
+	75%, 100% {
+		transform: scale(-1, 1) rotate(90deg)
+	}
+}
+
+
+@keyframes f4-1 {
+	100% {
+		transform: perspective(150px) rotateX(180deg)
+	}
+}
+
+@keyframes f4-2 {
+	0%, 49.9% {
+		background: #ffa516
+	}
+	50%, 100% {
+		background: #f03355
+	}
+}
+
+.flipping-5 {
+	width: 60px;
+	height: 60px;
+	animation: f5-0 1s infinite linear;
+}
+
+.flipping-5::before,
+.flipping-5::after {
+	content: "";
+	position: absolute;
+	inset: 0 50% 50% 0;
+	transform: scale(var(--s, 1)) perspective(150px) rotateX(0deg);
+	transform-origin: bottom right;
+	animation: f5-1 0.5s infinite linear alternate,
+	f5-2 0.5s infinite linear alternate;
+}
+
+.flipping-5::after {
+	--s: -1, -1;
+}
+
+@keyframes f5-0 {
+	0%, 49.99% {
+		transform: scale(1, 1) rotate(0deg)
+	}
+	50%, 100% {
+		transform: scale(1, -1) rotate(90deg)
+	}
+}
+
+
+@keyframes f5-1 {
+	100% {
+		transform: scale(var(--s, 1)) perspective(150px) rotateX(180deg)
+	}
+}
+
+@keyframes f5-2 {
+	0%, 49.9% {
+		background: #25b09b
+	}
+	50%, 100% {
+		background: #514b82
+	}
+}
+
+
+.flipping-6 {
+	width: 60px;
+	height: 60px;
+	color: #25b09b;
+	background: linear-gradient(currentColor 0 0),
+	linear-gradient(currentColor 0 0),
+	linear-gradient(currentColor 0 0);
+	background-size: 50.1% 50.1%;
+	background-repeat: no-repeat;
+	animation: f6-0 1.5s infinite linear alternate,
+	f6-0-0 3s infinite linear;
+}
+
+.flipping-6::before {
+	content: "";
+	display: block;
+	width: 50%;
+	height: 50%;
+	background: currentColor;
+	transform: perspective(150px) rotateY(0deg) rotateX(0deg);
+	transform-origin: bottom right;
+	animation: f6-1 1.5s infinite linear alternate;
+}
+
+
+@keyframes f6-0 {
+	0%, 32.99% {
+		background-position: 0 100%, 100% 100%, 100% 0
+	}
+	33%, 65.99% {
+		background-position: 100% 100%, 100% 100%, 100% 0
+	}
+	66%, 100% {
+		background-position: 100% 0, 100% 0, 100% 0
+	}
+}
+
+@keyframes f6-0-0 {
+	0%, 49.99% {
+		transform: scaleX(1) rotate(0deg)
+	}
+	50%, 100% {
+		transform: scaleX(-1) rotate(-90deg)
+	}
+}
+
+
+@keyframes f6-1 {
+	16.5% {
+		transform: perspective(150px) rotateX(-90deg) rotateY(0deg) rotateX(0deg);
+		filter: grayscale(0.8)
+	}
+	33% {
+		transform: perspective(150px) rotateX(-180deg) rotateY(0deg) rotateX(0deg)
+	}
+	66% {
+		transform: perspective(150px) rotateX(-180deg) rotateY(-180deg) rotateX(0deg)
+	}
+	100% {
+		transform: perspective(150px) rotateX(-180deg) rotateY(-180deg) rotateX(-180deg);
+		filter: grayscale(0.8)
+	}
+}
+
+.flipping-7 {
+	width: 60px;
+	height: 60px;
+	color: #ffa516;
+	background: linear-gradient(currentColor 0 0) 100% 0,
+	linear-gradient(currentColor 0 0) 0 100%;
+	background-size: 50.1% 50.1%;
+	background-repeat: no-repeat;
+	animation: f7-0 1s infinite linear;
+}
+
+.flipping-7::before,
+.flipping-7::after {
+	content: "";
+	position: absolute;
+	inset: 0 50% 50% 0;
+	background: currentColor;
+	transform: scale(var(--s, 1)) perspective(150px) rotateY(0deg);
+	transform-origin: bottom right;
+	animation: f7-1 .5s infinite linear alternate;
+}
+
+.flipping-7::after {
+	--s: -1, -1;
+}
+
+@keyframes f7-0 {
+	0%, 49.99% {
+		transform: scaleX(1) rotate(0deg)
+	}
+	50%, 100% {
+		transform: scaleX(-1) rotate(-90deg)
+	}
+}
+
+
+@keyframes f7-1 {
+	49.99% {
+		transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
+		filter: grayscale(0)
+	}
+	50% {
+		transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
+		filter: grayscale(0.8)
+	}
+	100% {
+		transform: scale(var(--s, 1)) perspective(150px) rotateX(-180deg);
+		filter: grayscale(0.8)
+	}
+}
+
+.flipping-8 {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	animation: f8-0 2s infinite linear;
+}
+
+.flipping-8::before,
+.flipping-8::after {
+	content: "";
+	flex: 1;
+	animation: f8-1 1s infinite linear alternate,
+	f8-2 2s infinite linear -.5s;
+}
+
+.flipping-8::after {
+	--s: -1, -1;
+}
+
+@keyframes f8-0 {
+	0%, 49.99% {
+		transform: scaleX(1) rotate(0deg)
+	}
+	50%, 100% {
+		transform: scaleX(-1) rotate(-90deg)
+	}
+}
+
+@keyframes f8-1 {
+	0%,
+	5% {
+		transform: scale(var(--s, 1)) translate(0px) perspective(150px) rotateY(0deg)
+	}
+	33% {
+		transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(0deg)
+	}
+	66% {
+		transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(-180deg)
+	}
+	95%,
+	100% {
+		transform: scale(var(--s, 1)) translate(0px) perspective(150px) rotateX(-180deg)
+	}
+}
+
+@keyframes f8-2 {
+	0%, 49.99% {
+		background: #f03355
+	}
+	50%, 100% {
+		background: #ffa516
+	}
+}
+
+
+.flipping-9 {
+	width: 60px;
+	height: 60px;
+	color: #ffa516;
+	border-radius: 50%;
+	background: linear-gradient(currentColor 0 0),
+	linear-gradient(currentColor 0 0),
+	linear-gradient(currentColor 0 0);
+	background-size: 50.1% 50.1%;
+	background-repeat: no-repeat;
+	animation: f9-0 1.5s infinite linear alternate,
+	f9-0-0 3s infinite linear alternate;
+}
+
+.flipping-9::before {
+	content: "";
+	display: block;
+	width: 50%;
+	height: 50%;
+	background: currentColor;
+	border-top-left-radius: 100px;
+	transform: perspective(150px) rotateY(0deg) rotateX(0deg);
+	transform-origin: bottom right;
+	animation: f9-1 1.5s infinite linear alternate;
+}
+
+
+@keyframes f9-0 {
+	0%, 32.99% {
+		background-position: 0 100%, 100% 100%, 100% 0
+	}
+	33%, 65.99% {
+		background-position: 100% 100%, 100% 100%, 100% 0
+	}
+	66%, 100% {
+		background-position: 100% 0, 100% 0, 100% 0
+	}
+}
+
+@keyframes f9-0-0 {
+	0%, 49.99% {
+		transform: scaleX(1) rotate(0deg)
+	}
+	50%, 100% {
+		transform: scaleX(-1) rotate(-90deg)
+	}
+}
+
+
+@keyframes f9-1 {
+	16.5% {
+		transform: perspective(150px) rotateX(-90deg) rotateY(0deg) rotateX(0deg);
+		filter: grayscale(0.8)
+	}
+	33% {
+		transform: perspective(150px) rotateX(-180deg) rotateY(0deg) rotateX(0deg)
+	}
+	66% {
+		transform: perspective(150px) rotateX(-180deg) rotateY(-180deg) rotateX(0deg)
+	}
+	100% {
+		transform: perspective(150px) rotateX(-180deg) rotateY(-180deg) rotateX(-180deg);
+		filter: grayscale(0.8)
+	}
+}
+
+.flipping-10 {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	animation: f10-0 2s infinite linear;
+}
+
+.flipping-10::before,
+.flipping-10::after {
+	content: "";
+	flex: 1;
+	animation: f10-1 1s infinite linear alternate,
+	f10-2 2s infinite linear -.5s;
+}
+
+.flipping-10::after {
+	--s: -1, -1;
+}
+
+@keyframes f10-0 {
+	0%, 49.99% {
+		transform: scaleX(1) rotate(0deg)
+	}
+	50%, 100% {
+		transform: scaleX(-1) rotate(-90deg)
+	}
+}
+
+@keyframes f10-1 {
+	0%,
+	5% {
+		transform: scale(var(--s, 1)) translate(0px) perspective(150px) rotateY(0deg)
+	}
+	33% {
+		transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(0deg)
+	}
+	66% {
+		transform: scale(var(--s, 1)) translate(-10px) perspective(150px) rotateX(-180deg)
+	}
+	95%,
+	100% {
+		transform: scale(var(--s, 1)) translate(0px) perspective(150px) rotateX(-180deg)
+	}
+}
+
+@keyframes f10-2 {
+	0%, 49.99% {
+		background: #514b82;
+		border-radius: 0
+	}
+	50%, 100% {
+		background: #25b09b;
+		border-radius: 100px 0 0 100px
+	}
+}
+
+.wobbling-1 {
+	width: 30px;
+	height: 30px;
+	display: grid;
+	transform: translateY(100%);
+}
+
+.wobbling-1::before,
+.wobbling-1::after {
+	content: "";
+	grid-area: 1/1;
+	border-radius: 50%;
+	transform-origin: bottom;
+	position: relative;
+}
+
+.wobbling-1::before {
+	background: radial-gradient(at 30% 30%, #0000, #000a) red;
+	transform: scaleY(0.65);
+	top: 0;
+	animation: w1-1, w1-2;
+	animation-duration: 2s;
+	animation-timing-function: cubic-bezier(0, 400, 1, 400), ease;
+	animation-iteration-count: infinite;
+}
+
+.wobbling-1::after {
+	background: #ccc;
+	filter: blur(8px);
+	transform: scaleY(0.3) translate(0px, 0);
+	left: 0;
+	animation: w1-3 2s cubic-bezier(0, 400, 1, 400) infinite;
+}
+
+@keyframes w1-1 {
+	100% {
+		top: -0.2px
+	}
+}
+
+@keyframes w1-2 {
+	4%, 96% {
+		transform: scaleY(1)
+	}
+}
+
+@keyframes w1-3 {
+	100% {
+		transform: scaleY(0.3) translate(0.1px, -0.1px)
+	}
+}
+
+.wobbling-2 {
+	width: 100px;
+	height: 60px;
+	display: flex;
+	animation: w2-0 2s infinite linear;
+}
+
+.wobbling-2::before,
+.wobbling-2::after {
+	content: "";
+	flex: 4;
+	background: radial-gradient(at 50% 20%, #0000, #000a) bottom left/20px 20px repeat-x,
+	linear-gradient(red 0 0) bottom/100% 20px no-repeat #ddd;
+	-webkit-mask: repeating-linear-gradient(90deg, #000 0 4px, #0000 0 20px) 8px 0,
+	radial-gradient(farthest-side, #000 90%, #0000) left bottom/20px 20px repeat-x;
+}
+
+.wobbling-2::after {
+	flex: 1;
+	transform-origin: top;
+	animation: w2-1 1s cubic-bezier(0, 20, 1, 20) infinite;
+}
+
+@keyframes w2-0 {
+	0%, 49.9% {
+		transform: scaleX(1)
+	}
+	50%, 100% {
+		transform: scaleX(-1)
+	}
+}
+
+@keyframes w2-1 {
+	100% {
+		transform: rotate(-2deg)
+	}
+}
+
+.wobbling-3 {
+	width: 20px;
+	height: 20px;
+	animation: w3-0 2s linear infinite;
+}
+
+.wobbling-3::before,
+.wobbling-3::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+	background: radial-gradient(at 30% 30%, #0000, #000a) red;
+	animation: w3-1 0.5s cubic-bezier(.5, -500, .5, 500) infinite;
+}
+
+.wobbling-3::after {
+	animation-delay: -0.15s;
+}
+
+@keyframes w3-0 {
+	100% {
+		transform: rotate(360deg)
+	}
+}
+
+@keyframes w3-1 {
+	100% {
+		transform: translate(0.5px)
+	}
+}
+
+
+.wobbling-4 {
+	width: 80px;
+	height: 80px;
+	background: radial-gradient(farthest-side at top, #0000 calc(100% - 21px), lightblue calc(100% - 20px) 99%, #0000) bottom/100% 50%,
+	radial-gradient(farthest-side, lightblue 94%, #0000) left /20px 20px,
+	radial-gradient(farthest-side, lightblue 94%, #0000) right/20px 20px;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.wobbling-4::before {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	inset: auto 0 0;
+	margin: auto;
+	border-radius: 50%;
+	background: orange;
+	transform-origin: 50% -20px;
+	animation: w4 1s infinite cubic-bezier(0.5, 623, 0.5, -623);
+}
+
+@keyframes w4 {
+	100% {
+		transform: rotate(0.5deg)
+	}
+}
+
+
+.wobbling-5 {
+	height: 80px;
+	width: 20px;
+	color: #514b82;
+	background: radial-gradient(farthest-side, currentColor 94%, #0000) top/8px 8px,
+	linear-gradient(currentColor 0 0) top/4px 70%,
+	conic-gradient(from -30deg at bottom, #0000, currentColor 2deg 58deg, #0000 60deg) bottom            /100% 20px,
+	conic-gradient(from 150deg at top, #0000, currentColor 2deg 58deg, #0000 60deg) bottom 20px left 0/100% 20px;
+	background-repeat: no-repeat;
+	transform-origin: 50% 4px;
+	animation: w5 2s infinite cubic-bezier(0.5, 300, 0.5, -300);
+}
+
+@keyframes w5 {
+	100% {
+		transform: rotate(0.5deg)
+	}
+}
+
+.wobbling-6 {
+	width: 80px;
+	height: 50px;
+	background: radial-gradient(farthest-side, #0000 calc(100% - 15px), #ccc calc(100% - 14px) 99%, #0000) center/50px 100%,
+	linear-gradient(#ccc 0 0) bottom/100% 14px;
+	background-repeat: no-repeat;
+	position: relative;
+	animation: w6-0 2s -0.5s infinite linear;
+}
+
+.wobbling-6:before {
+	content: "";
+	position: absolute;
+	inset: auto auto 2px 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #f03355;
+	transform-origin: 50% -14px;
+	animation: w6-1 .5s infinite linear alternate;
+}
+
+@keyframes w6-0 {
+	0%, 49.99% {
+		transform: scaleX(1)
+	}
+	50%, 100% {
+		transform: scaleX(-1)
+	}
+}
+
+@keyframes w6-1 {
+	0% {
+		transform: translate(0) rotate(0)
+	}
+	50% {
+		transform: translate(34px) rotate(0)
+	}
+	100% {
+		transform: translate(34px) rotate(-180deg)
+	}
+}
+
+.wobbling-7 {
+	height: 20px;
+	width: 80px;
+	transform: rotate(-30deg);
+	background: radial-gradient(farthest-side, #f03355 90%, #0000) left bottom/15px 15px no-repeat #ddd;
+	animation: w7-0 2s infinite alternate linear,
+	w7-1 2s infinite cubic-bezier(.75, 0, 1, .6);
+}
+
+@keyframes w7-0 {
+	50% {
+		transform: rotate(30deg)
+	}
+}
+
+@keyframes w7-1 {
+	50% {
+		background-position: right bottom
+	}
+}
+
+.wobbling-8 {
+	height: 40px;
+	width: calc(20px * 4);
+	color: #25b09b;
+	background: linear-gradient(currentColor 0 0),
+	linear-gradient(currentColor 0 0),
+	linear-gradient(currentColor 0 0),
+	linear-gradient(currentColor 0 0);
+	background-size: calc(100% / 4 + 1px) 50%;
+	background-repeat: no-repeat;
+	animation: w8 1s infinite cubic-bezier(0.5, 150, 0.5, -150);
+}
+
+@keyframes w8 {
+	0% {
+		background-position: calc(0 * 100% / 3) 50%, calc(1 * 100% / 3) 50%, calc(2 * 100% / 3) 50%, calc(3 * 100% / 3) 50%
+	}
+	100% {
+		background-position: calc(0 * 100% / 3) 51%, calc(1 * 100% / 3) 50.5%, calc(2 * 100% / 3) 49.5%, calc(3 * 100% / 3) 49%
+	}
+}
+
+
+.wobbling-9 {
+	height: 30px;
+	width: calc(15px * 6);
+	color: #514b82;
+	background: linear-gradient(currentColor 0 0) calc(0 * 100% / 5) 50%,
+	linear-gradient(currentColor 0 0) calc(1 * 100% / 5) 50%,
+	linear-gradient(currentColor 0 0) calc(2 * 100% / 5) 50%,
+	linear-gradient(currentColor 0 0) calc(3 * 100% / 5) 50%,
+	linear-gradient(currentColor 0 0) calc(4 * 100% / 5) 50%,
+	linear-gradient(currentColor 0 0) calc(5 * 100% / 5) 50%;
+	background-size: calc(100% / 6 + 1px) 50%;
+	background-repeat: no-repeat;
+	animation: w9 1s infinite cubic-bezier(0.5, 170, 0.5, -170);
+}
+
+@keyframes w9 {
+	14.28% {
+		background-position: calc(0 * 100% / 5) 51%, calc(1 * 100% / 5) 50%, calc(2 * 100% / 5) 50%, calc(3 * 100% / 5) 50%, calc(4 * 100% / 5) 50%, calc(5 * 100% / 5) 50%
+	}
+	28.57% {
+		background-position: calc(0 * 100% / 5) 50%, calc(1 * 100% / 5) 51%, calc(2 * 100% / 5) 50%, calc(3 * 100% / 5) 50%, calc(4 * 100% / 5) 50%, calc(5 * 100% / 5) 50%
+	}
+	42.85% {
+		background-position: calc(0 * 100% / 5) 50%, calc(1 * 100% / 5) 50%, calc(2 * 100% / 5) 51%, calc(3 * 100% / 5) 50%, calc(4 * 100% / 5) 50%, calc(5 * 100% / 5) 50%
+	}
+	57.14% {
+		background-position: calc(0 * 100% / 5) 50%, calc(1 * 100% / 5) 50%, calc(2 * 100% / 5) 50%, calc(3 * 100% / 5) 51%, calc(4 * 100% / 5) 50%, calc(5 * 100% / 5) 50%
+	}
+	71.42% {
+		background-position: calc(0 * 100% / 5) 50%, calc(1 * 100% / 5) 50%, calc(2 * 100% / 5) 50%, calc(3 * 100% / 5) 50%, calc(4 * 100% / 5) 51%, calc(5 * 100% / 5) 50%
+	}
+	85.71% {
+		background-position: calc(0 * 100% / 5) 50%, calc(1 * 100% / 5) 50%, calc(2 * 100% / 5) 50%, calc(3 * 100% / 5) 50%, calc(4 * 100% / 5) 50%, calc(5 * 100% / 5) 51%
+	}
+}
+
+.shapes-1 {
+	width: 40px;
+	height: 40px;
+	color: #25b09b;
+	display: grid;
+}
+
+.shapes-1::before,
+.shapes-1::after {
+	content: "";
+	grid-area: 1/1;
+	background: currentColor;
+	clip-path: polygon(0 0, 50% 50%, 0 100%);
+	animation: sp1 2s infinite;
+}
+
+.shapes-1::after {
+	animation-delay: -1.5s;
+	--s: 90deg;
+}
+
+@keyframes sp1 {
+	0%, 12.5% {
+		transform: rotate(var(--s, 0deg)) rotate(0deg)
+	}
+	37.5%, 62.5% {
+		transform: rotate(var(--s, 0deg)) rotate(-180deg)
+	}
+	87.5%, 100% {
+		transform: rotate(var(--s, 0deg)) rotate(-360deg)
+	}
+}
+
+.shapes-2 {
+	width: 40px;
+	height: 40px;
+	color: #514b82;
+	background: repeating-conic-gradient(from -47deg, #0000 0deg, currentColor 1deg 91deg, #0000 94deg 180deg);
+	display: flex;
+	animation: sp2-0 2s infinite linear;
+}
+
+.shapes-2::before,
+.shapes-2::after {
+	content: "";
+	flex: 1;
+	background: currentColor;
+	clip-path: polygon(0 0, 100% 50%, 0 100%);
+	animation: sp2 1s infinite alternate;
+	transform-origin: bottom left;
+
+}
+
+.shapes-2::after {
+	clip-path: polygon(100% 0, 100% 100%, 0 50%);
+	transform-origin: top right;
+}
+
+@keyframes sp2-0 {
+	0%, 49.9% {
+		transform: scaleX(1)
+	}
+	50%, 100% {
+		transform: scaleX(-1)
+	}
+}
+
+@keyframes sp2 {
+	0%, 20% {
+		transform: rotate(0deg)
+	}
+	80%, 100% {
+		transform: rotate(-270deg)
+	}
+}
+
+.shapes-3 {
+	width: 40px;
+	height: 40px;
+	color: orange;
+	display: grid;
+}
+
+.shapes-3::before,
+.shapes-3::after {
+	content: "";
+	grid-area: 1/1;
+	background: currentColor;
+	clip-path: polygon(0 0, 101% 0, 0 100%);
+	animation: sp3 2s infinite;
+}
+
+.shapes-3::after {
+	--s: -1, -1;
+}
+
+@keyframes sp3 {
+	0%,
+	10% {
+		transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg)
+	}
+	33% {
+		transform: scale(var(--s, 1)) translate(20px, -20px) rotate(0deg)
+	}
+	66% {
+		transform: scale(var(--s, 1)) translate(20px, -20px) rotate(180deg)
+	}
+	90%,
+	100% {
+		transform: scale(var(--s, 1)) translate(0px, 0) rotate(180deg)
+	}
+}
+
+.shapes-4 {
+	width: 40px;
+	height: 40px;
+	color: #f03355;
+	background: conic-gradient(currentColor 0 270deg, #0000 0);
+	border-radius: 50%;
+	animation: sp4-0 4s infinite linear;
+}
+
+.shapes-4::before {
+	content: "";
+	display: block;
+	height: 50%;
+	width: 50%;
+	border-top-left-radius: 100px;
+	background: currentColor;
+	animation: sp4 0.5s infinite alternate;
+}
+
+@keyframes sp4-0 {
+	0%, 24.99% {
+		transform: rotate(0deg)
+	}
+	25%, 49.99% {
+		transform: rotate(90deg)
+	}
+	50%, 74.99% {
+		transform: rotate(180deg)
+	}
+	75%, 100% {
+		transform: rotate(270deg)
+	}
+}
+
+@keyframes sp4 {
+	100% {
+		transform: translate(-10px, -10px)
+	}
+}
+
+.shapes-5 {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	transform-origin: 50% 125%;
+	animation: sp5-0 1.5s infinite linear;
+}
+
+.shapes-5:before,
+.shapes-5:after {
+	content: "";
+	flex: 1;
+	background: orange;
+	animation: inherit;
+	transform-origin: bottom left;
+	animation-name: sp5-1;
+}
+
+.shapes-5:before {
+	transform-origin: bottom right;
+	--s: -1;
+}
+
+@keyframes sp5-0 {
+	0%, 10% {
+		transform: translateY(0) scaleY(1)
+	}
+	49.99% {
+		transform: translateY(-75%) scaleY(1)
+	}
+	50% {
+		transform: translateY(-75%) scaleY(-1)
+	}
+	90%, 100% {
+		transform: translateY(-150%) scaleY(-1)
+	}
+}
+
+@keyframes sp5-1 {
+	10%, 90% {
+		transform: rotate(0deg)
+	}
+	50% {
+		transform: rotate(calc(var(--s, 1) * 90deg))
+	}
+}
+
+.shapes-6 {
+	width: 40px;
+	height: 40px;
+	color: #25b09b;
+	position: relative;
+	background: linear-gradient(currentColor 0 0) center/100% 10px,
+	linear-gradient(currentColor 0 0) center/10px 100%;
+	background-repeat: no-repeat;
+}
+
+.shapes-6:before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(currentColor 0 0) 0 0,
+	linear-gradient(currentColor 0 0) 100% 0,
+	linear-gradient(currentColor 0 0) 0 100%,
+	linear-gradient(currentColor 0 0) 100% 100%;
+	background-size: 15.5px 15.5px;
+	background-repeat: no-repeat;
+	animation: sp6 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes sp6 {
+	33% {
+		inset: -10px;
+		transform: rotate(0deg)
+	}
+	66% {
+		inset: -10px;
+		transform: rotate(90deg)
+	}
+	100% {
+		inset: 0;
+		transform: rotate(90deg)
+	}
+}
+
+.shapes-7 {
+	width: 40px;
+	height: 60px;
+	color: #514b82;
+	position: relative;
+}
+
+.shapes-7::before,
+.shapes-7::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: currentColor;
+	clip-path: polygon(0 0, 100% 0, 100% 67%, 50% 67%, 50% 34%, 0 34%);
+	animation: sp7 2s infinite;
+}
+
+.shapes-7::after {
+	--s: -1, -1;
+}
+
+@keyframes sp7 {
+	0%,
+	10% {
+		transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg)
+	}
+	33% {
+		transform: scale(var(--s, 1)) translate(0, -20px) rotate(0deg)
+	}
+	66% {
+		transform: scale(var(--s, 1)) translate(10px, -20px) rotate(-90deg)
+	}
+	90%,
+	100% {
+		transform: scale(var(--s, 1)) translate(10px, -10px) rotate(-90deg)
+	}
+}
+
+.shapes-8 {
+	width: 40px;
+	height: 40px;
+	color: #f03355;
+	position: relative;
+	background: radial-gradient(10px, currentColor 94%, #0000);
+}
+
+.shapes-8:before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+	background: radial-gradient(9px at bottom right, #0000 94%, currentColor) top left,
+	radial-gradient(9px at bottom left, #0000 94%, currentColor) top right,
+	radial-gradient(9px at top right, #0000 94%, currentColor) bottom left,
+	radial-gradient(9px at top left, #0000 94%, currentColor) bottom right;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	animation: sp8 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes sp8 {
+	33% {
+		inset: -10px;
+		transform: rotate(0deg)
+	}
+	66% {
+		inset: -10px;
+		transform: rotate(90deg)
+	}
+	100% {
+		inset: 0;
+		transform: rotate(90deg)
+	}
+}
+
+.shapes-9 {
+	width: 40px;
+	height: 20px;
+	background: orange;
+	position: relative;
+	animation: sp9-0 1.5s infinite linear;
+}
+
+.shapes-9:before,
+.shapes-9:after {
+	content: "";
+	position: absolute;
+	background: inherit;
+	bottom: 100%;
+	width: 50%;
+	height: 100%;
+	animation: inherit;
+	animation-name: sp9-1;
+}
+
+.shapes-9:before {
+	left: 0;
+	--s: -1, 1;
+}
+
+.shapes-9:after {
+	right: 0;
+}
+
+@keyframes sp9-0 {
+	0%, 30% {
+		transform: translateY(0) scaleY(1)
+	}
+	49.99% {
+		transform: translateY(-50%) scaleY(1)
+	}
+	50% {
+		transform: translateY(-50%) scaleY(-1)
+	}
+	70%, 100% {
+		transform: translateY(-100%) scaleY(-1)
+	}
+}
+
+@keyframes sp9-1 {
+	0%, 10%, 90%, 100% {
+		transform: scale(var(--s, 1)) translate(0)
+	}
+	30%, 70% {
+		transform: scale(var(--s, 1)) translate(20px)
+	}
+	50% {
+		transform: scale(var(--s, 1)) translate(20px, 20px)
+	}
+}
+
+.shapes-10 {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	transform-origin: 0 150%;
+	animation: sp10-0 2s infinite linear;
+}
+
+.shapes-10:before,
+.shapes-10:after {
+	content: "";
+	flex: 1;
+	background: #f03355;
+	animation: sp10-1 1s infinite linear alternate;
+	border-radius: 100px 0 0 100px;
+	transform-origin: 100% 100%;
+}
+
+.shapes-10:after {
+	border-radius: 0 100px 100px 0;
+	transform-origin: 0 100%;
+	--s: -1;
+}
+
+@keyframes sp10-0 {
+	0%, 10% {
+		transform: translateY(0) scaleY(1)
+	}
+	49.99% {
+		transform: translateY(-100%) scaleY(1)
+	}
+	50% {
+		transform: translateY(-100%) scaleY(-1)
+	}
+	90%, 100% {
+		transform: translateY(-200%) scaleY(-1)
+	}
+}
+
+@keyframes sp10-1 {
+	0%, 20% {
+		transform: rotate(0deg) translate(0, 0) rotate(0deg)
+	}
+	50% {
+		transform: rotate(calc(var(--s, 1) * -90deg)) translate(0, 0) rotate(0deg)
+	}
+	100% {
+		transform: rotate(calc(var(--s, 1) * -90deg)) translate(0, -20px) rotate(calc(var(--s, 1) * -90deg))
+	}
+}
+
+.arcade-1 {
+	width: 45px;
+	height: 30px;
+	animation: a1 2s infinite linear;
+}
+
+@keyframes a1 {
+	0%,
+	25% {
+		background: linear-gradient(#e50021 0 0) 50% 0/66% 100% no-repeat
+	}
+	25.1%,
+	50% {
+		background: linear-gradient(#004ce4 0 0) 0 0/100% 50% no-repeat,
+		linear-gradient(#004ce4 0 0) 0 0/33% 100% no-repeat
+	}
+	50.1%,
+	75% {
+		background: linear-gradient(#00e622 0 0) 100% 0/66% 50% no-repeat,
+		linear-gradient(#00e622 0 0) 0 100%/66% 50% no-repeat
+	}
+	75.1%,
+	100% {
+		background: linear-gradient(#9d0be6 0 0) 0 100%/100% 50% no-repeat,
+		linear-gradient(#9d0be6 0 0) 50% 0 /33%  50% no-repeat
+	}
+}
+
+/*.arcade-2 {
+	width: 45px;
+	height: 30px;
+	background: linear-gradient(#004ce4 0 0) 0 100%/100% 50%,
+	linear-gradient(#004ce4 0 0) 0 0   /calc(100%/3) 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	clip-path: inset(-100% 0 0 0);
+	animation: a2-0 2s infinite steps(4);
+}
+
+.arcade-2::before,
+.arcade-2::after {
+	content: "";
+	position: absolute;
+	inset: -50% 0 50%;
+	background: linear-gradient(#00e622 0 0) 0 0      /calc(2*100%/3) 50%,
+	linear-gradient(#00e622 0 0) 100% 100%/calc(2*100%/3) 50%;
+	background-repeat: no-repeat;
+	animation: inherit;
+	animation-name: a2-1;
+}
+
+.arcade-2::after {
+	inset: -100% 0 100%;
+	background: linear-gradient(#e50021 0 0) 0    0/100%         50%,
+	linear-gradient(#e50021 0 0) 100% 0/calc(100%/3) 100%;
+	background-repeat: no-repeat;
+	animation-name: a2-2;
+}
+
+@keyframes a2-0 {
+	0% {
+		transform: translateY(-250%);
+		clip-path: inset(100% 0 0 0)
+	}
+	25%, 100% {
+		transform: translateY(0);
+		clip-path: inset(-100% 0 0 0)
+	}
+}
+
+@keyframes a2-1 {
+	0%, 25% {
+		transform: translateY(-250%)
+	}
+	50%, 100% {
+		transform: translateY(0)
+	}
+}
+
+@keyframes a2-2 {
+	0%, 50% {
+		transform: translateY(-250%)
+	}
+	75%, 100% {
+		transform: translateY(0)
+	}
+}*/
+
+/*.arcade-3 {
+	width: 80px;
+	height: 70px;
+	border: 5px solid #000;
+	padding: 0 8px;
+	background: linear-gradient(#fff 0 0) 0    0/8px 20px,
+	linear-gradient(#fff 0 0) 100% 0/8px 20px,
+	radial-gradient(farthest-side, #fff 90%, #0000) 0 5px/8px 8px content-box,
+	#000;
+	background-repeat: no-repeat;
+	animation: a3 2s infinite linear;
+}
+
+@keyframes a3 {
+	25% {
+		background-position: 0 0, 100% 100%, 100% calc(100% - 5px)
+	}
+	50% {
+		background-position: 0 100%, 100% 100%, 0 calc(100% - 5px)
+	}
+	75% {
+		background-position: 0 100%, 100% 0, 100% 5px
+	}
+}*/
+
+.arcade-4 {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: radial-gradient(farthest-side, #000 98%, #0000) 55% 20%/8px 8px no-repeat,
+	#fc0;
+	box-shadow: 2px -6px 12px 0 inset rgba(0, 0, 0, 0.7);
+	animation: a4 .5s infinite steps(5) alternate;
+}
+
+@keyframes a4 {
+	0% {
+		clip-path: polygon(50% 50%, 100% 0, 100% 0, 0 0, 0 100%, 100% 100%, 100% 100%)
+	}
+	100% {
+		clip-path: polygon(50% 50%, 100% 65%, 100% 0, 0 0, 0 100%, 100% 100%, 100% 35%)
+	}
+}
+
+/*.arcade-5 {
+	width: 90px;
+	height: 24px;
+	padding: 2px 0;
+	display: flex;
+	animation: a5-0 3s infinite steps(6);
+	background: linear-gradient(#000 0 0) 0 0/0% 100% no-repeat,
+	radial-gradient(circle 3px, #eeee89 90%, #0000) 0 0/20% 100% #000;
+	overflow: hidden;
+}
+
+.arcade-5::before {
+	content: "";
+	width: 20px;
+	transform: translate(-100%);
+	border-radius: 50%;
+	background: #ffff2d;
+	animation: a5-1 .25s .153s infinite steps(5) alternate,
+	a5-2 3s infinite linear;
+}
+
+@keyframes a5-1 {
+	0% {
+		clip-path: polygon(50% 50%, 100% 0, 100% 0, 0 0, 0 100%, 100% 100%, 100% 100%)
+	}
+	100% {
+		clip-path: polygon(50% 50%, 100% 65%, 100% 0, 0 0, 0 100%, 100% 100%, 100% 35%)
+	}
+}
+
+@keyframes a5-2 {
+	100% {
+		transform: translate(90px)
+	}
+}
+
+@keyframes a5-0 {
+	100% {
+		background-size: 120% 100%, 20% 100%
+	}
+}*/
+
+
+.arcade-6 {
+	width: 80px;
+	height: 60px;
+	background: linear-gradient(#fff 0 0) left /calc(50% - 15px) 8px no-repeat,
+	linear-gradient(#fff 0 0) right/calc(50% - 15px) 8px no-repeat,
+	conic-gradient(from 135deg at top, #0000, red 1deg 90deg, #0000 91deg) bottom/14px 8px repeat-x,
+	#000;
+	border-bottom: 2px solid red;
+	position: relative;
+	overflow: hidden;
+	animation: a6-0 1s infinite linear;
+}
+
+.arcade-6::before {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 14px;
+	background: lightblue;
+	left: -5px;
+	animation: a6-1 2s infinite cubic-bezier(0, 100, 1, 100),
+	a6-2 2s infinite linear;
+}
+
+@keyframes a6-0 {
+	50% {
+		background-position: left, right,bottom -2px left -4px
+	}
+}
+
+@keyframes a6-1 {
+	0%, 27% {
+		bottom: calc(50% + 4px)
+	}
+	65%, 100% {
+		bottom: calc(50% + 4.1px)
+	}
+}
+
+@keyframes a6-2 {
+	100% {
+		left: 100%
+	}
+}
+
+
+.arcade-7 {
+	width: 70px;
+	height: 50px;
+	background: conic-gradient(from 135deg at top, #0000, #fff 1deg 90deg, #0000 91deg) right -20px bottom 8px/18px 9px,
+	linear-gradient(#fff 0 0) bottom/100% 8px,
+	#000;
+	background-repeat: no-repeat;
+	border-bottom: 8px solid #000;
+	position: relative;
+	animation: a7-0 2s infinite linear;
+}
+
+.arcade-7::before {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 14px;
+	background: lightblue;
+	left: 10px;
+	animation: a7-1 2s infinite cubic-bezier(0, 200, 1, 200);
+}
+
+@keyframes a7-0 {
+	100% {
+		background-position: left -20px bottom 8px, bottom
+	}
+}
+
+@keyframes a7-1 {
+	0%, 50% {
+		bottom: 8px
+	}
+	90%, 100% {
+		bottom: 8.1px
+	}
+}
+
+.arcade-8 {
+	font-size: 17px;
+	font-family: monospace;
+	font-weight: bold;
+	background: linear-gradient(#000 0 0),
+	linear-gradient(#000 0 0),
+	linear-gradient(#000 0 0),
+	linear-gradient(#000 0 0),
+	linear-gradient(#000 0 0),
+	linear-gradient(#000 0 0),
+	linear-gradient(#000 0 0);
+	background-size: calc(1ch + 1px) 100%;
+	background-repeat: no-repeat;
+	border-bottom: 10px solid #0000;
+	position: relative;
+	animation: a8-0 3s infinite linear;
+	clip-path: inset(-20px 0);
+}
+
+.arcade-8::before {
+	content: "Loading";
+}
+
+.arcade-8::after {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 14px;
+	background: #25adda;
+	left: -10px;
+	bottom: 100%;
+	animation: a8-1 3s infinite linear;
+}
+
+@keyframes a8-0 {
+	0%,
+	12.5% {
+		background-position: calc(0 * 100% / 6) 0, calc(1 * 100% / 6) 0, calc(2 * 100% / 6) 0, calc(3 * 100% / 6) 0, calc(4 * 100% / 6) 0, calc(5 * 100% / 6) 0, calc(6 * 100% / 6) 0
+	}
+	25% {
+		background-position: calc(0 * 100% / 6) 40px, calc(1 * 100% / 6) 0, calc(2 * 100% / 6) 0, calc(3 * 100% / 6) 0, calc(4 * 100% / 6) 0, calc(5 * 100% / 6) 0, calc(6 * 100% / 6) 0
+	}
+	37.5% {
+		background-position: calc(0 * 100% / 6) 40px, calc(1 * 100% / 6) 40px, calc(2 * 100% / 6) 0, calc(3 * 100% / 6) 0, calc(4 * 100% / 6) 0, calc(5 * 100% / 6) 0, calc(6 * 100% / 6) 0
+	}
+	50% {
+		background-position: calc(0 * 100% / 6) 40px, calc(1 * 100% / 6) 40px, calc(2 * 100% / 6) 40px, calc(3 * 100% / 6) 0, calc(4 * 100% / 6) 0, calc(5 * 100% / 6) 0, calc(6 * 100% / 6) 0
+	}
+	62.5% {
+		background-position: calc(0 * 100% / 6) 40px, calc(1 * 100% / 6) 40px, calc(2 * 100% / 6) 40px, calc(3 * 100% / 6) 40px, calc(4 * 100% / 6) 0, calc(5 * 100% / 6) 0, calc(6 * 100% / 6) 0
+	}
+	75% {
+		background-position: calc(0 * 100% / 6) 40px, calc(1 * 100% / 6) 40px, calc(2 * 100% / 6) 40px, calc(3 * 100% / 6) 40px, calc(4 * 100% / 6) 40px, calc(5 * 100% / 6) 0, calc(6 * 100% / 6) 0
+	}
+	87.4% {
+		background-position: calc(0 * 100% / 6) 40px, calc(1 * 100% / 6) 40px, calc(2 * 100% / 6) 40px, calc(3 * 100% / 6) 40px, calc(4 * 100% / 6) 40px, calc(5 * 100% / 6) 40px, calc(6 * 100% / 6) 0
+	}
+	100% {
+		background-position: calc(0 * 100% / 6) 40px, calc(1 * 100% / 6) 40px, calc(2 * 100% / 6) 40px, calc(3 * 100% / 6) 40px, calc(4 * 100% / 6) 40px, calc(5 * 100% / 6) 40px, calc(6 * 100% / 6) 40px
+	}
+}
+
+@keyframes a8-1 {
+	100% {
+		left: 115%
+	}
+}
+
+.arcade-9 {
+	font-size: 17px;
+	font-family: monospace;
+	font-weight: bold;
+	background: linear-gradient(#000 0 0) left,
+	linear-gradient(#000 0 0) right;
+	background-repeat: no-repeat;
+	border-right: 5px solid #0000;
+	border-left: 5px solid #0000;
+	background-origin: border-box;
+	position: relative;
+	animation: a9-0 2s infinite;
+}
+
+@keyframes a9-0 {
+	0%, 25% {
+		background-size: 50% 100%
+	}
+	25.1%, 75% {
+		background-size: 0 0, 50% 100%
+	}
+	75.1%, 100% {
+		background-size: 0 0, 0 0
+	}
+}
+
+.arcade-9::before {
+	content: "Loading";
+}
+
+.arcade-9::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 22px;
+	height: 60px;
+	background: linear-gradient(90deg, #000 4px, #0000 0 calc(100% - 4px), #000 0) bottom            /22px 20px,
+	linear-gradient(90deg, red 4px, #0000 0 calc(100% - 4px), red 0) bottom 10px left 0/22px 6px,
+	linear-gradient(#000 0 0) bottom 3px left 0  /22px 8px,
+	linear-gradient(#000 0 0) bottom 0 left 50%/8px  16px;
+	background-repeat: no-repeat;
+	animation: a9-1 2s infinite;
+}
+
+@keyframes a9-1 {
+	25% {
+		background-position: bottom, bottom 54px left 0, bottom 3px left 0, bottom 0 left 50%;
+		left: 0
+	}
+	25.1% {
+		background-position: bottom, bottom 10px left 0, bottom 3px left 0, bottom 0 left 50%;
+		left: 0
+	}
+	50% {
+		background-position: bottom, bottom 10px left 0, bottom 3px left 0, bottom 0 left 50%;
+		left: calc(100% - 22px)
+	}
+	75% {
+		background-position: bottom, bottom 54px left 0, bottom 3px left 0, bottom 0 left 50%;
+		left: calc(100% - 22px)
+	}
+	75.1% {
+		background-position: bottom, bottom 10px left 0, bottom 3px left 0, bottom 0 left 50%;
+		left: calc(100% - 22px)
+	}
+}
+
+.arcade-10 {
+	font-size: 17px;
+	font-family: monospace;
+	font-weight: bold;
+	padding: 30px 2px 50px;
+	background: linear-gradient(#000 0 0) 0 0/100% 100% content-box padding-box no-repeat;
+	position: relative;
+	overflow: hidden;
+	animation: a10-0 2s infinite cubic-bezier(1, 175, .5, 175);
+}
+
+@keyframes a10-0 {
+	0%, 30% {
+		background-position: 0 0
+	}
+	50%, 100% {
+		background-position: 0 -0.2px
+	}
+}
+
+.arcade-10::before {
+	content: "Loading";
+}
+
+.arcade-10::after {
+	content: "";
+	position: absolute;
+	width: 34px;
+	height: 28px;
+	top: 110%;
+	left: calc(50% - 16px);
+	background: linear-gradient(90deg, #0000 12px, #f92033 0 22px, #0000 0 26px, #fdc98d 0 32px, #0000) bottom 26px left 50%,
+	linear-gradient(90deg, #0000 10px, #f92033 0 28px, #fdc98d 0 32px, #0000 0) bottom 24px left 50%,
+	linear-gradient(90deg, #0000 10px, #643700 0 16px, #fdc98d 0 20px, #000 0 22px, #fdc98d 0 24px, #000 0 26px, #f92033 0 32px, #0000 0) bottom 22px left 50%,
+	linear-gradient(90deg, #0000 8px, #643700 0 10px, #fdc98d 0 12px, #643700 0 14px, #fdc98d 0 20px, #000 0 22px, #fdc98d 0 28px, #f92033 0 32px, #0000 0) bottom 20px left 50%,
+	linear-gradient(90deg, #0000 8px, #643700 0 10px, #fdc98d 0 12px, #643700 0 16px, #fdc98d 0 22px, #000 0 24px, #fdc98d 0 30px, #f92033 0 32px, #0000 0) bottom 18px left 50%,
+	linear-gradient(90deg, #0000 8px, #643700 0 12px, #fdc98d 0 20px, #000 0 28px, #f92033 0 30px, #0000 0) bottom 16px left 50%,
+	linear-gradient(90deg, #0000 12px, #fdc98d 0 26px, #f92033 0 30px, #0000 0) bottom 14px left 50%,
+	linear-gradient(90deg, #fdc98d 6px, #f92033 0 14px, #222a87 0 16px, #f92033 0 22px, #222a87 0 24px, #f92033 0 28px, #0000 0 32px, #643700 0) bottom 12px left 50%,
+	linear-gradient(90deg, #fdc98d 6px, #f92033 0 16px, #222a87 0 18px, #f92033 0 24px, #f92033 0 26px, #0000 0 30px, #643700 0) bottom 10px left 50%,
+	linear-gradient(90deg, #0000 10px, #f92033 0 16px, #222a87 0 24px, #feee49 0 26px, #222a87 0 30px, #643700 0) bottom 8px left 50%,
+	linear-gradient(90deg, #0000 12px, #222a87 0 18px, #feee49 0 20px, #222a87 0 30px, #643700 0) bottom 6px left 50%,
+	linear-gradient(90deg, #0000 8px, #643700 0 12px, #222a87 0 30px, #643700 0) bottom 4px left 50%,
+	linear-gradient(90deg, #0000 6px, #643700 0 14px, #222a87 0 26px, #0000 0) bottom 2px left 50%,
+	linear-gradient(90deg, #0000 6px, #643700 0 10px, #0000 0) bottom 0 left 50%;
+	background-size: 34px 2px;
+	background-repeat: no-repeat;
+	animation: inherit;
+	animation-name: a10-1;
+}
+
+@keyframes a10-1 {
+	50% {
+		top: 109.5%
+	}
+	100% {
+		top: 109.5%
+	}
+}

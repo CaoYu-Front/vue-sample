@@ -16,7 +16,7 @@
 
 <script>
 /**
- * @desc 404.vue
+ * @description 404.vue
  * @author caoyu
  * @CreatedTime 2021/6/28 17:16
  **/

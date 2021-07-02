@@ -1,5 +1,5 @@
 /**
- * @desc 验证邮箱格式
+ * @description 验证邮箱格式
  * @param {String} email 邮箱号码
  * */
 export function isEmail(email) {
@@ -9,7 +9,7 @@ export function isEmail(email) {
 }
 
 /**
- * @desc 验证手机号码
+ * @description 验证手机号码
  * @param {String} mobile 手机号
  * */
 export function isMobile(mobile) {
@@ -18,7 +18,7 @@ export function isMobile(mobile) {
 }
 
 /**
- * @desc 验证固话
+ * @description 验证固话
  * @param {String} telephone 固话号码
  * */
 export function isPhone(telephone) {

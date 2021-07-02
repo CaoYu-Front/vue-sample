@@ -19,11 +19,21 @@ export default [
         },
         component: () => import("@/views/pages/index/index"),
       },
+      {
+        path: "/test",
+        name: "test",
+        meta: {
+          hideInMenu: true,
+          title: "测试",
+          notCache: true,
+        },
+        component: () => import("@/views/test/index"),
+      },
     ],
   },
   {
     path: "*",
-    name: "error_404",
+    name: "error404",
     meta: {
       hideInMenu: true,
     },
@@ -31,7 +41,7 @@ export default [
   },
   {
     path: "*",
-    name: "error_401",
+    name: "error401",
     meta: {
       hideInMenu: true,
     },
