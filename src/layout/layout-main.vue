@@ -23,6 +23,7 @@
  **/
 import LayoutSidebar from "./components/layout-sidebar";
 import LayoutContent from "./components/layout-content";
+import { winLocalStorage } from "@/utils/utils";
 
 export default {
   name: "layout-main",
@@ -63,7 +64,10 @@ export default {
     },
   },
   created() {
-    this.tabs = [{ title: "首页", name: "homepage" }];
+    const aTabs = winLocalStorage({ name: "tabs" });
+    // const sActiveMenu = winLocalStorage({ name: "tabs" });
+    if (aTabs && aTabs.length) this.tabs = aTabs;
+    else this.tabs = [{ title: "首页", name: "homepage" }];
   },
   mounted() {
     window.addEventListener("resize", this.fWinResize, false);
