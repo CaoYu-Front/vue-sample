@@ -17,7 +17,7 @@ export default [
           title: "首页",
           notCache: true,
         },
-        component: () => import("@/views/pages/index/index"),
+        component: () => import("@/views/pages/index/home"),
       },
       {
         path: "/test",
@@ -28,6 +28,16 @@ export default [
           notCache: true,
         },
         component: () => import("@/views/test/index"),
+      },
+      {
+        path: "/index",
+        name: "index",
+        meta: {
+          hideInMenu: true,
+          title: "主页",
+          notCache: true,
+        },
+        component: () => import("@/views/pages/index/index"),
       },
     ],
   },

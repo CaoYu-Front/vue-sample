@@ -2,9 +2,9 @@
   <el-container class="wrap-abs">
     <el-header ref="header">Header</el-header>
     <el-container class="wrap" :height="`${nContHeight}px`">
-      <el-aside :height="`${nContHeight}px`">
+      <el-aside :height="`${nContHeight}px`" :width="`${menuCollapse ? 68 : 300}px`">
         <el-scrollbar class="main-scroll">
-          <layout-navbar :menu="aMenus" />
+          <layout-sidebar :menu="aMenus" />
         </el-scrollbar>
       </el-aside>
       <el-main>
@@ -21,42 +21,50 @@
  * @author caoyu
  * @CreatedTime 2021/6/28 13:46
  **/
-import LayoutNavbar from "./layout-navbar";
-import LayoutContent from "./layout-content";
+import LayoutSidebar from "./components/layout-sidebar";
+import LayoutContent from "./components/layout-content";
 
 export default {
   name: "layout-main",
   props: {},
-  components: { LayoutNavbar, LayoutContent },
+  components: { LayoutSidebar, LayoutContent },
   data() {
     return {
       nContHeight: 0,
       aMenus: [
         {
-          id: "animation",
-          name: "动效",
+          name: "animation",
+          title: "动效",
           icon: "el-icon-setting",
           children: [
-            { id: "test", name: "测试", icon: "el-icon-loading" },
-            { id: "carousel", name: "轮播", icon: "el-icon-data-board" },
-          ],
-        },
-        {
-          id: "data",
-          name: "可视化数据",
-          icon: "el-icon-notebook-1",
-          children: [
-            { id: "table", name: "滚动列表", icon: "el-icon-s-grid" },
-            { id: "gpscoor", name: "gps坐标简易转化", icon: "el-icon-s-grid" },
-            { id: "draglist", name: "拖拽列表", icon: "el-icon-s-grid" },
-            { id: "echarts", name: "Echarts图", icon: "el-icon-s-grid" },
+            { name: "test", title: "测试页面", icon: "el-icon-loading" },
+            { name: "index", title: "主页", icon: "el-icon-data-board" },
           ],
         },
       ],
     };
   },
-  computed: {},
-  created() {},
+  computed: {
+    tabs: {
+      get() {
+        return this.$store.state.common.tabs || [];
+      },
+      set(val) {
+        this.$store.commit("common/updateTabs", val);
+      },
+    },
+    menuCollapse: {
+      get() {
+        return this.$store.state.common.menuCollapse || false;
+      },
+      set(val) {
+        this.$store.commit("common/updateMenuCollapse", val);
+      },
+    },
+  },
+  created() {
+    this.tabs = [{ title: "首页", name: "homepage" }];
+  },
   mounted() {
     window.addEventListener("resize", this.fWinResize, false);
     this.fWinResize({
@@ -65,7 +73,6 @@ export default {
   },
   methods: {
     fWinResize(e) {
-      console.log(e);
       this.$nextTick(() => {
         const nHead = this.$refs.header && this.$refs.header.$el.clientHeight;
         const nFoot = this.$refs.footer && this.$refs.footer.$el.clientHeight;
@@ -93,7 +100,8 @@ export default {
 }
 
 .el-aside {
-  background-color: @c_block;
+  //background-color: @c_black;
+  transition: width 0.5s ease-out;
 }
 
 .el-main {

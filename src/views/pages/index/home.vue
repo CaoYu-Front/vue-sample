@@ -1,15 +1,15 @@
 <template>
-  <div class="layout-sidebar">layout-sidebar</div>
+  <div class="home">home</div>
 </template>
 
 <script>
 /**
- * @description layout-sidebar.vue
- * @author caoyu
- * @CreatedTime 2021/6/28 7:42 下午
+ * @description home.vue
+ * @author handle、
+ * @CreatedTime 2021/7/5 15:25
  **/
 export default {
-  name: "layout-sidebar",
+  name: "home",
   props: {},
   components: {},
   data() {
@@ -25,13 +25,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.layout-sidebar {
-}
+@import url("~@/assets/css/_variables");
 
-::v-deep {
+.home {
 }
 </style>
 <style lang="less">
-.layout-sidebar {
+.home {
 }
 </style>

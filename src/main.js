@@ -2,7 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import ElementUI from "element-ui";
 import router from "@/router/index";
-import "@/theme/default/element-ui.css";
+import store from "@/store/index";
+import "@/theme/default/index.css";
 import "@/assets/css/common.less";
 
 Vue.config.productionTip = false;
@@ -14,5 +15,6 @@ Vue.use(ElementUI);
 
 new Vue({
   router,
+  store,
   render: (h) => h(App),
 }).$mount("#app");
