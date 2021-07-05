@@ -48,7 +48,7 @@ export default {
   computed: {
     tabs: {
       get() {
-        return this.$store.state.common.tabs || [];
+        return this.$store.state.common.tabs;
       },
       set(val) {
         this.$store.commit("common/updateTabs", val);
@@ -62,11 +62,20 @@ export default {
         this.$store.commit("common/updateMenuCollapse", val);
       },
     },
+    menuActiveName: {
+      get() {
+        return this.$store.state.common.menuActiveName;
+      },
+      set(val) {
+        this.$store.commit("common/updateMenuActiveName", val);
+      },
+    },
   },
   created() {
-    const aTabs = winLocalStorage({ name: "tabs" });
-    // const sActiveMenu = winLocalStorage({ name: "tabs" });
-    if (aTabs && aTabs.length) this.tabs = aTabs;
+    const aTabs = JSON.parse(winLocalStorage({ key: "tabs", type: "read" }));
+    const sMenuActiveName = winLocalStorage({ key: "menuActiveName", type: "read" });
+    if (sMenuActiveName && sMenuActiveName !== "null") this.menuActiveName = sMenuActiveName;
+    if (aTabs && aTabs.length && aTabs !== "null") this.tabs = aTabs;
     else this.tabs = [{ title: "首页", name: "homepage" }];
   },
   mounted() {

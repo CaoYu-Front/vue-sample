@@ -36,6 +36,7 @@
  * @CreatedTime 2021/6/28 9:15 下午
  **/
 import * as _ from "lodash";
+import { winLocalStorage } from "@/utils/utils";
 
 export default {
   name: "layout-navbar",
@@ -68,7 +69,7 @@ export default {
     },
     menuActiveName: {
       get() {
-        return this.$store.state.common.menuActiveName || "homepage";
+        return this.$store.state.common.menuActiveName;
       },
       set(val) {
         this.$store.commit("common/updateMenuActiveName", val);
@@ -76,7 +77,7 @@ export default {
     },
     tabs: {
       get() {
-        return this.$store.state.common.tabs || [];
+        return this.$store.state.common.tabs;
       },
       set(val) {
         this.$store.commit("common/updateTabs", val);
@@ -87,16 +88,21 @@ export default {
     this.menu.forEach((oMenu) => {
       this.aDefaultOpens.push(oMenu.name);
     });
-    this.fMenuClick(this.oIndex);
   },
   mounted() {},
   methods: {
     fMenuClick(oMenu) {
-      const bExist = _.find(this.tabs, oMenu);
-      if (!bExist) this.tabs = [...this.tabs, oMenu];
+      const oExist = _.find(this.tabs, oMenu);
+      let aTab = _.cloneDeep(this.tabs);
+      if (!oExist) {
+        aTab.push(oMenu);
+        this.tabs = aTab;
+      }
       this.$nextTick(() => {
         this.menuActiveName = oMenu.name;
         this.$router.push(oMenu);
+        winLocalStorage({ key: "menuActiveName", value: oMenu.name });
+        winLocalStorage({ key: "tabs", value: aTab });
       });
     },
   },

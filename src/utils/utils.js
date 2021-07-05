@@ -1,6 +1,6 @@
 /**
  * @description local storage操作
- * @param {{name: string}} option 参数
+ * @param {{value, key: string}} option 参数
  * @param {String} option.key 需要存储的数据名
  * @param {*} option.value 需要存储的数据
  * @param {String} option.type 操作类型 默认存值，读取需填read

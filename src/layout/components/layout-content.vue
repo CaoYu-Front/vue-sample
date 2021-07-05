@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import { winLocalStorage } from "@/utils/utils";
+
 /**
  * @description layout-content.vue
  * @author caoyu
@@ -57,7 +59,7 @@ export default {
   computed: {
     menuActiveName: {
       get() {
-        return this.$store.state.common.menuActiveName || "homepage";
+        return this.$store.state.common.menuActiveName;
       },
       set(val) {
         this.$store.commit("common/updateMenuActiveName", val);
@@ -65,7 +67,7 @@ export default {
     },
     tabs: {
       get() {
-        return this.$store.state.common.tabs || [];
+        return this.$store.state.common.tabs;
       },
       set(val) {
         this.$store.commit("common/updateTabs", val);
@@ -89,15 +91,7 @@ export default {
     fOnTabClick(tab) {
       this.$router.push({ name: tab.name });
       this.menuActiveName = tab.name;
-    },
-    addTab() {
-      let newTabName = ++this.tabIndex + "";
-      this.aTabs.push({
-        title: "New Tab",
-        name: newTabName,
-        content: "New Tab content",
-      });
-      this.sCurTab = newTabName;
+      winLocalStorage({ key: "menuActiveName", value: tab.name });
     },
     fOnTabRemove(targetName) {
       let tabs = this.tabs;
@@ -113,6 +107,7 @@ export default {
         });
       }
       this.tabs = tabs.filter((tab) => tab.name !== targetName);
+      winLocalStorage({ key: "tabs", value: this.tabs });
       this.fOnTabClick(this.tabs.find((tab) => tab.name === activeName));
     },
   },
