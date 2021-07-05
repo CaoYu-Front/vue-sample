@@ -96,7 +96,7 @@ export default {
 .el-footer {
   text-align: center;
   line-height: 60px;
-  background-color: #b3c0d1;
+  background-color: @c_info;
 }
 
 .el-aside {
