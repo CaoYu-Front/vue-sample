@@ -75,6 +75,7 @@ export default {
     const aTabs = JSON.parse(winLocalStorage({ key: "tabs", type: "read" }));
     const sMenuActiveName = winLocalStorage({ key: "menuActiveName", type: "read" });
     if (sMenuActiveName && sMenuActiveName !== "null") this.menuActiveName = sMenuActiveName;
+    this.$router.push({ name: this.menuActiveName });
     if (aTabs && aTabs.length && aTabs !== "null") this.tabs = aTabs;
     else this.tabs = [{ title: "首页", name: "homepage" }];
   },

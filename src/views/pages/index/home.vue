@@ -1,8 +1,12 @@
 <template>
-  <div class="home">home</div>
+  <div class="home">
+    <map-china />
+  </div>
 </template>
 
 <script>
+import MapChina from "@/components/map/map-china";
+
 /**
  * @description home.vue
  * @author handle、
@@ -11,7 +15,7 @@
 export default {
   name: "home",
   props: {},
-  components: {},
+  components: { MapChina },
   data() {
     return {};
   },
