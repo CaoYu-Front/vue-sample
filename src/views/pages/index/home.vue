@@ -1,6 +1,14 @@
 <template>
   <div class="home">
-    <map-china />
+    <map-china show-label-on-hover show-content-on-click>
+      <div class="" slot="label" slot-scope="{ scope }">
+        {{ scope.title }}
+      </div>
+      <div class="" slot="content" slot-scope="{ scope }">
+        {{ scope.title }}<br />
+        {{ scope.name }}
+      </div>
+    </map-china>
   </div>
 </template>
 
